@@ -1,15 +1,15 @@
 package controllers;
 
-import com.fasterxml.jackson.databind.node.ObjectNode;
-
 import models.Modellinginfrastructure;
 import models.PropertiesAndValues;
-import play.*;
 import play.data.Form;
-import play.mvc.*;
 import play.libs.Json;
+import play.mvc.Controller;
+import play.mvc.Result;
+import views.html.index;
+import views.html.submit;
 
-import views.html.*;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 
 public class Application extends Controller {
 
