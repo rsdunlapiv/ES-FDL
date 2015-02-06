@@ -1,0 +1,3815 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.earthsystemcog.org/projects/es-fdl/ontology"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.earthsystemcog.org/projects/es-fdl/ontology"
+     versionIRI="http://www.earthsystemcog.org/projects/es-fdl/ontology/0.1">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="esfdl" IRI="http://www.earthsystemcog.org/projects/es-fdl/ontology#"/>
+    <Declaration>
+        <Class IRI="#BasicCapabilities"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ChangeManagement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ClientLanguageBindings"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ControlRegime"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CoordinateDimensions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CoordinateSystem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DataExchangeMechanism"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DecompositionSpec_Transport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DecompositionType_Transport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DesignIntent_General"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DistanceMeasure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Documentation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DriverCustomization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ExternalSoftwareDependencies"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FieldPriming_Transport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ImplementationLanguage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#License"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MaxPolygonEdges"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mediation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MetaDataOutput"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MetaDataOutputFormats"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModelComponentRef"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModelExecutionConcurrency"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModelMetaDataRuntimeQuery"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModelMetaDataStaticQuery"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModelMetadataFlow"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModelMetadataProvision"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModelMetadataProvisionFormats"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModellingInfrastructure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MultiExecutable"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Opensource"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Options"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Options_GridDescription"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Options_Transport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ParallelLibrary"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Parallelism"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Poles"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Repartitioning_Transport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Support"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SupportedModels"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SupportedOperatingSystems"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SupportedPlatforms"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SwappableComponents"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Temporal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tests"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TopologicalDimensions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TopologicalStructure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WeightApplicationExecution"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WeightApplicationInterpolationMethod"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WeightGenerationExecution"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WeightGenerationInterpolationMethod"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasBasicCapabilities"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasChangeManagement"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasClientLanguageBindings"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasControlRegime"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCoordinateDimensions"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCoordinateSystem"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDataExchangeMechanism"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDecompositionSpecTransport"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDecompositionTypeTransport"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDesignIntentGeneral"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDistanceMeasure"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDocumentation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDriverCustomization"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasExternalSoftwareDependencies"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFieldPrimingTransport"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasImplementationLanguage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLicense"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMaxPolygonEdges"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMediation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMetaDataOutput"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMetaDataOutputFormats"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasModelComponentRef"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasModelExecutionConcurrency"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasModelMetadataFlow"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasModelMetadataProvision"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasModelMetadataProvisionFormats"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasModelMetadataRuntimeQuery"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasModelMetadataStaticQuery"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMultiExecutable"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasOptions"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasOptionsGridDescription"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasOptionsTransport"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasParallelLibrary"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasParallelism"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRepartitioningTransport"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSupport"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSupportedModels"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSupportedOperatingSystems"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSupportedPlatforms"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTemporal"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTests"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTopologicalDimensions"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTopologicalStructure"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasWeightApplicationExecution"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasWeightApplicationInterpolationMethod"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasWeightGenerationExecution"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasWeightGenerationInterpolationMethod"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#supportsCompilers"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDeveloperDocumentation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasModelComponentAbstraction"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasOpenSource"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSparseMatrixMultiplication"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AngleConversion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Apache_Licence_2.0"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AppSpatialInterpWts"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BSD_2-Clause_Licence"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BSD_3-Clause_Licence"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Build_and_or_Configuration_management"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CSDMS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cartesian"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Contiguous_blocks"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Defines_an_interface_for_models"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ESMF"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GNU_General_Public_Licence"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GNU_Lesser_General_Public_Licence"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Generation_of_spatial_interpolation_weights"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Linux"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MCT"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MIT_Licence"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MPI"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MPI_dem"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mac"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OASIS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#One_D"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#One_D_segments"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OpenACC"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OpenMP"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Programming_Language_interoperability"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Provides_data_structures_for_storing_model_fields"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Semantic_mediation_of_model_weights"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Source_code_annotations"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Temporal_Interpolation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Three_D"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TransferFieldData"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Two_D"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Unit_Conversion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Windows"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Workflow"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#accumulation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#adaptive"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#adaptive_coupling_frequency"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#an_identifier_such_as_an_integer_or_string"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#an_instance_of_a_Fortran_derived_type_or_C_struct"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#an_object_in_an_object-oriented_language"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#arbitrary_user_assigned"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#averaging"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#between_different_decompositions"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bilinear_trilinear"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bilinear_trilinear_waim"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bundles"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#by_changing_configuration_metadata"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#by_changing_model_field_data_dependencies"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#by_specializing_a_generic_driver"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#c"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#c_clb"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cloud"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cluster"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#completion_of_coupling_fields_with_external_data"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#comprehensive_API_Reference"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#conditional_target"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#coupler_is_a_seperate_executable"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cplusplus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cplusplus_clb"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#csharp"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#csharp_clb"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#described_globally"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#described_locally"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#desktop_laptop"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#directly_in_source_code_eg_API_calls"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#email"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#entire_application_is_a_single_executable"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#event_based"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#example_application_code"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#execution_methods"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#execution_methods_sq"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#explicit_control_control_thread_is_in_a_driver_written_mostly_entirely_by_the_user"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#explicit_control_control_thread_is_in_a_generic_driver"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#explicit_control_control_thread_is_in_a_generic_driver_that_can_be_customized_specialized_by_user"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#extrapolation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#extrapolation_outside_source_domain"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#extrapolation_outside_source_domain_waim"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#field_combination_merging"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#file"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#file_to_file"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#first_order_conservative"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#first_order_conservative_wain"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#fortran"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#fortran_clb"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#forum"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#from_constant_or_function"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#from_file"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#from_memory"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#great_circle"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#higher_order_conservative"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#higher_order_conservative_wain"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#higher_order_non_conservative"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#higher_order_non_conservative_wain"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#implicit_control_model_retain_control_and_control_sequence_is_determined_by_data_dependencies"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#in_a_standardized_format"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#in_an_infrastructure_specific_format"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#interpolation_linear"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#interpolation_quadratic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#interpolation_stairstep"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#issue_tracker"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#java"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#java_clb"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#land_ocean_coastline_consistency_checking"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#list_of_input_physical_fields"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#list_of_input_physical_fields_sq"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#list_of_output_physical_fields"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#list_of_output_physical_fields_sq"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#location_stream"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#logically_rectangular"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#masking"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#mechanism_for_community_contribution"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#mediates_between_parallel_and_serial_codes"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#metadata_flows_from_driver_infrastructure_to_model_components"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#metadata_flows_from_model_components_to_infrastructure_driver"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#minimum_or_maximum_in_time"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#models_are_seperate_executables"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#models_can_execute_concurrently"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#models_can_execute_sequentially"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#multi_tile"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#multiprocessing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#multithreading"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#nearest_neighbour"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#nearest_neighbour_waim"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#nesting"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#non_conformal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#non_geometrical"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#non_geometrical_waim"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#offline_parallel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#offline_serial"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#one_D"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#one_to_many"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#online"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#online_parallel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#online_reusable"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#online_serial"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#phone"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#process_to_prioritize_user_requests"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#properties_of_the_numerical_grid"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#properties_of_the_numerical_grid_sq"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#provides_a_software_framework"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#provides_data_structures_for_describing_numerical_grids"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#pthreads"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#python"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#python_clb"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#read_from_a_configuration_file_in_an_infrastructure-specific_format"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#read_from_configuration_file_in_a_standard_format"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#shared_memory"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#spherical"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#straight_line"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#subroutine_or_method_argument_passing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#supports_parallelism"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#system_tests"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#system_tests_T"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#temporal_metadata"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#temporal_metadata_sq"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#three_D"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#time_stepping_method"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#time_stepping_method_sq"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#training_courses"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#two_D"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ungridded_dimensions"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#unit_conversion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#unit_tests"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#unit_tests_T"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#unstructured"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#user_guide_tutorials"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#vector_fields"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#version_control"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#web_request"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#workshops"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#XMLMapping"/>
+    </Declaration>
+    <DisjointClasses>
+        <Class IRI="#BasicCapabilities"/>
+        <Class IRI="#ChangeManagement"/>
+        <Class IRI="#ClientLanguageBindings"/>
+        <Class IRI="#ControlRegime"/>
+        <Class IRI="#CoordinateDimensions"/>
+        <Class IRI="#CoordinateSystem"/>
+        <Class IRI="#DataExchangeMechanism"/>
+        <Class IRI="#DecompositionSpec_Transport"/>
+        <Class IRI="#DecompositionType_Transport"/>
+        <Class IRI="#DesignIntent_General"/>
+        <Class IRI="#DistanceMeasure"/>
+        <Class IRI="#Documentation"/>
+        <Class IRI="#DriverCustomization"/>
+        <Class IRI="#ExternalSoftwareDependencies"/>
+        <Class IRI="#FieldPriming_Transport"/>
+        <Class IRI="#ImplementationLanguage"/>
+        <Class IRI="#License"/>
+        <Class IRI="#MaxPolygonEdges"/>
+        <Class IRI="#Mediation"/>
+        <Class IRI="#MetaDataOutput"/>
+        <Class IRI="#MetaDataOutputFormats"/>
+        <Class IRI="#ModelComponentRef"/>
+        <Class IRI="#ModelExecutionConcurrency"/>
+        <Class IRI="#ModelMetaDataRuntimeQuery"/>
+        <Class IRI="#ModelMetaDataStaticQuery"/>
+        <Class IRI="#ModelMetadataFlow"/>
+        <Class IRI="#ModelMetadataProvision"/>
+        <Class IRI="#ModelMetadataProvisionFormats"/>
+        <Class IRI="#ModellingInfrastructure"/>
+        <Class IRI="#MultiExecutable"/>
+        <Class IRI="#Opensource"/>
+        <Class IRI="#Options"/>
+        <Class IRI="#Options_GridDescription"/>
+        <Class IRI="#Options_Transport"/>
+        <Class IRI="#ParallelLibrary"/>
+        <Class IRI="#Parallelism"/>
+        <Class IRI="#Poles"/>
+        <Class IRI="#Repartitioning_Transport"/>
+        <Class IRI="#Support"/>
+        <Class IRI="#SupportedModels"/>
+        <Class IRI="#SupportedOperatingSystems"/>
+        <Class IRI="#SupportedPlatforms"/>
+        <Class IRI="#SwappableComponents"/>
+        <Class IRI="#Temporal"/>
+        <Class IRI="#Tests"/>
+        <Class IRI="#TopologicalDimensions"/>
+        <Class IRI="#TopologicalStructure"/>
+        <Class IRI="#WeightApplicationExecution"/>
+        <Class IRI="#WeightApplicationInterpolationMethod"/>
+        <Class IRI="#WeightGenerationExecution"/>
+        <Class IRI="#WeightGenerationInterpolationMethod"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#BasicCapabilities"/>
+        <NamedIndividual IRI="#AngleConversion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#License"/>
+        <NamedIndividual IRI="#Apache_Licence_2.0"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BasicCapabilities"/>
+        <NamedIndividual IRI="#AppSpatialInterpWts"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#License"/>
+        <NamedIndividual IRI="#BSD_2-Clause_Licence"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#License"/>
+        <NamedIndividual IRI="#BSD_3-Clause_Licence"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BasicCapabilities"/>
+        <NamedIndividual IRI="#Build_and_or_Configuration_management"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModellingInfrastructure"/>
+        <NamedIndividual IRI="#CSDMS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CoordinateSystem"/>
+        <NamedIndividual IRI="#Cartesian"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DecompositionType_Transport"/>
+        <NamedIndividual IRI="#Contiguous_blocks"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BasicCapabilities"/>
+        <NamedIndividual IRI="#Defines_an_interface_for_models"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModellingInfrastructure"/>
+        <NamedIndividual IRI="#ESMF"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#License"/>
+        <NamedIndividual IRI="#GNU_General_Public_Licence"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#License"/>
+        <NamedIndividual IRI="#GNU_Lesser_General_Public_Licence"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BasicCapabilities"/>
+        <NamedIndividual IRI="#Generation_of_spatial_interpolation_weights"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SupportedOperatingSystems"/>
+        <NamedIndividual IRI="#Linux"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModellingInfrastructure"/>
+        <NamedIndividual IRI="#MCT"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#License"/>
+        <NamedIndividual IRI="#MIT_Licence"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ParallelLibrary"/>
+        <NamedIndividual IRI="#MPI"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DataExchangeMechanism"/>
+        <NamedIndividual IRI="#MPI_dem"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SupportedOperatingSystems"/>
+        <NamedIndividual IRI="#Mac"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModellingInfrastructure"/>
+        <NamedIndividual IRI="#OASIS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CoordinateDimensions"/>
+        <NamedIndividual IRI="#One_D"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DecompositionType_Transport"/>
+        <NamedIndividual IRI="#One_D_segments"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ParallelLibrary"/>
+        <NamedIndividual IRI="#OpenACC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ParallelLibrary"/>
+        <NamedIndividual IRI="#OpenMP"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BasicCapabilities"/>
+        <NamedIndividual IRI="#Programming_Language_interoperability"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BasicCapabilities"/>
+        <NamedIndividual IRI="#Provides_data_structures_for_storing_model_fields"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BasicCapabilities"/>
+        <NamedIndividual IRI="#Semantic_mediation_of_model_weights"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModelMetadataProvision"/>
+        <NamedIndividual IRI="#Source_code_annotations"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BasicCapabilities"/>
+        <NamedIndividual IRI="#Temporal_Interpolation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CoordinateDimensions"/>
+        <NamedIndividual IRI="#Three_D"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BasicCapabilities"/>
+        <NamedIndividual IRI="#TransferFieldData"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CoordinateDimensions"/>
+        <NamedIndividual IRI="#Two_D"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BasicCapabilities"/>
+        <NamedIndividual IRI="#Unit_Conversion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SupportedOperatingSystems"/>
+        <NamedIndividual IRI="#Windows"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BasicCapabilities"/>
+        <NamedIndividual IRI="#Workflow"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Temporal"/>
+        <NamedIndividual IRI="#accumulation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Options_GridDescription"/>
+        <NamedIndividual IRI="#adaptive"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Options_Transport"/>
+        <NamedIndividual IRI="#adaptive_coupling_frequency"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModelComponentRef"/>
+        <NamedIndividual IRI="#an_identifier_such_as_an_integer_or_string"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModelComponentRef"/>
+        <NamedIndividual IRI="#an_instance_of_a_Fortran_derived_type_or_C_struct"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModelComponentRef"/>
+        <NamedIndividual IRI="#an_object_in_an_object-oriented_language"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DecompositionType_Transport"/>
+        <NamedIndividual IRI="#arbitrary_user_assigned"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Temporal"/>
+        <NamedIndividual IRI="#averaging"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Repartitioning_Transport"/>
+        <NamedIndividual IRI="#between_different_decompositions"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WeightGenerationInterpolationMethod"/>
+        <NamedIndividual IRI="#bilinear_trilinear"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WeightApplicationInterpolationMethod"/>
+        <NamedIndividual IRI="#bilinear_trilinear_waim"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Options"/>
+        <NamedIndividual IRI="#bundles"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DriverCustomization"/>
+        <NamedIndividual IRI="#by_changing_configuration_metadata"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DriverCustomization"/>
+        <NamedIndividual IRI="#by_changing_model_field_data_dependencies"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DriverCustomization"/>
+        <NamedIndividual IRI="#by_specializing_a_generic_driver"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ImplementationLanguage"/>
+        <NamedIndividual IRI="#c"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ClientLanguageBindings"/>
+        <NamedIndividual IRI="#c_clb"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SupportedPlatforms"/>
+        <NamedIndividual IRI="#cloud"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SupportedPlatforms"/>
+        <NamedIndividual IRI="#cluster"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Mediation"/>
+        <NamedIndividual IRI="#completion_of_coupling_fields_with_external_data"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Documentation"/>
+        <NamedIndividual IRI="#comprehensive_API_Reference"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Options_Transport"/>
+        <NamedIndividual IRI="#conditional_target"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MultiExecutable"/>
+        <NamedIndividual IRI="#coupler_is_a_seperate_executable"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ImplementationLanguage"/>
+        <NamedIndividual IRI="#cplusplus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ClientLanguageBindings"/>
+        <NamedIndividual IRI="#cplusplus_clb"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ImplementationLanguage"/>
+        <NamedIndividual IRI="#csharp"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ClientLanguageBindings"/>
+        <NamedIndividual IRI="#csharp_clb"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DecompositionSpec_Transport"/>
+        <NamedIndividual IRI="#described_globally"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DecompositionSpec_Transport"/>
+        <NamedIndividual IRI="#described_locally"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SupportedPlatforms"/>
+        <NamedIndividual IRI="#desktop_laptop"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModelMetadataProvision"/>
+        <NamedIndividual IRI="#directly_in_source_code_eg_API_calls"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Support"/>
+        <NamedIndividual IRI="#email"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MultiExecutable"/>
+        <NamedIndividual IRI="#entire_application_is_a_single_executable"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Options_Transport"/>
+        <NamedIndividual IRI="#event_based"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Documentation"/>
+        <NamedIndividual IRI="#example_application_code"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModelMetaDataRuntimeQuery"/>
+        <NamedIndividual IRI="#execution_methods"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModelMetaDataStaticQuery"/>
+        <NamedIndividual IRI="#execution_methods_sq"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ControlRegime"/>
+        <NamedIndividual IRI="#explicit_control_control_thread_is_in_a_driver_written_mostly_entirely_by_the_user"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ControlRegime"/>
+        <NamedIndividual IRI="#explicit_control_control_thread_is_in_a_generic_driver"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ControlRegime"/>
+        <NamedIndividual IRI="#explicit_control_control_thread_is_in_a_generic_driver_that_can_be_customized_specialized_by_user"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Temporal"/>
+        <NamedIndividual IRI="#extrapolation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WeightGenerationInterpolationMethod"/>
+        <NamedIndividual IRI="#extrapolation_outside_source_domain"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WeightApplicationInterpolationMethod"/>
+        <NamedIndividual IRI="#extrapolation_outside_source_domain_waim"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Mediation"/>
+        <NamedIndividual IRI="#field_combination_merging"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DataExchangeMechanism"/>
+        <NamedIndividual IRI="#file"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WeightApplicationExecution"/>
+        <NamedIndividual IRI="#file_to_file"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WeightGenerationInterpolationMethod"/>
+        <NamedIndividual IRI="#first_order_conservative"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WeightApplicationInterpolationMethod"/>
+        <NamedIndividual IRI="#first_order_conservative_wain"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ImplementationLanguage"/>
+        <NamedIndividual IRI="#fortran"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ClientLanguageBindings"/>
+        <NamedIndividual IRI="#fortran_clb"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Support"/>
+        <NamedIndividual IRI="#forum"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FieldPriming_Transport"/>
+        <NamedIndividual IRI="#from_constant_or_function"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FieldPriming_Transport"/>
+        <NamedIndividual IRI="#from_file"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FieldPriming_Transport"/>
+        <NamedIndividual IRI="#from_memory"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DistanceMeasure"/>
+        <NamedIndividual IRI="#great_circle"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WeightGenerationInterpolationMethod"/>
+        <NamedIndividual IRI="#higher_order_conservative"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WeightApplicationInterpolationMethod"/>
+        <NamedIndividual IRI="#higher_order_conservative_wain"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WeightGenerationInterpolationMethod"/>
+        <NamedIndividual IRI="#higher_order_non_conservative"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WeightApplicationInterpolationMethod"/>
+        <NamedIndividual IRI="#higher_order_non_conservative_wain"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ControlRegime"/>
+        <NamedIndividual IRI="#implicit_control_model_retain_control_and_control_sequence_is_determined_by_data_dependencies"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MetaDataOutput"/>
+        <NamedIndividual IRI="#in_a_standardized_format"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MetaDataOutput"/>
+        <NamedIndividual IRI="#in_an_infrastructure_specific_format"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Temporal"/>
+        <NamedIndividual IRI="#interpolation_linear"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Temporal"/>
+        <NamedIndividual IRI="#interpolation_quadratic"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Temporal"/>
+        <NamedIndividual IRI="#interpolation_stairstep"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ChangeManagement"/>
+        <NamedIndividual IRI="#issue_tracker"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ImplementationLanguage"/>
+        <NamedIndividual IRI="#java"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ClientLanguageBindings"/>
+        <NamedIndividual IRI="#java_clb"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Mediation"/>
+        <NamedIndividual IRI="#land_ocean_coastline_consistency_checking"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModelMetaDataRuntimeQuery"/>
+        <NamedIndividual IRI="#list_of_input_physical_fields"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModelMetaDataStaticQuery"/>
+        <NamedIndividual IRI="#list_of_input_physical_fields_sq"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModelMetaDataRuntimeQuery"/>
+        <NamedIndividual IRI="#list_of_output_physical_fields"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModelMetaDataStaticQuery"/>
+        <NamedIndividual IRI="#list_of_output_physical_fields_sq"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TopologicalStructure"/>
+        <NamedIndividual IRI="#location_stream"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TopologicalStructure"/>
+        <NamedIndividual IRI="#logically_rectangular"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Options_GridDescription"/>
+        <NamedIndividual IRI="#masking"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ChangeManagement"/>
+        <NamedIndividual IRI="#mechanism_for_community_contribution"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BasicCapabilities"/>
+        <NamedIndividual IRI="#mediates_between_parallel_and_serial_codes"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModelMetadataFlow"/>
+        <NamedIndividual IRI="#metadata_flows_from_driver_infrastructure_to_model_components"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModelMetadataFlow"/>
+        <NamedIndividual IRI="#metadata_flows_from_model_components_to_infrastructure_driver"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Temporal"/>
+        <NamedIndividual IRI="#minimum_or_maximum_in_time"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MultiExecutable"/>
+        <NamedIndividual IRI="#models_are_seperate_executables"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModelExecutionConcurrency"/>
+        <NamedIndividual IRI="#models_can_execute_concurrently"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModelExecutionConcurrency"/>
+        <NamedIndividual IRI="#models_can_execute_sequentially"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Options_GridDescription"/>
+        <NamedIndividual IRI="#multi_tile"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parallelism"/>
+        <NamedIndividual IRI="#multiprocessing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parallelism"/>
+        <NamedIndividual IRI="#multithreading"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WeightGenerationInterpolationMethod"/>
+        <NamedIndividual IRI="#nearest_neighbour"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WeightApplicationInterpolationMethod"/>
+        <NamedIndividual IRI="#nearest_neighbour_waim"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Options_GridDescription"/>
+        <NamedIndividual IRI="#nesting"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Options_GridDescription"/>
+        <NamedIndividual IRI="#non_conformal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WeightGenerationInterpolationMethod"/>
+        <NamedIndividual IRI="#non_geometrical"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WeightApplicationInterpolationMethod"/>
+        <NamedIndividual IRI="#non_geometrical_waim"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WeightGenerationExecution"/>
+        <NamedIndividual IRI="#offline_parallel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WeightGenerationExecution"/>
+        <NamedIndividual IRI="#offline_serial"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TopologicalDimensions"/>
+        <NamedIndividual IRI="#one_D"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Repartitioning_Transport"/>
+        <NamedIndividual IRI="#one_to_many"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WeightApplicationExecution"/>
+        <NamedIndividual IRI="#online"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WeightGenerationExecution"/>
+        <NamedIndividual IRI="#online_parallel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WeightGenerationExecution"/>
+        <NamedIndividual IRI="#online_reusable"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WeightGenerationExecution"/>
+        <NamedIndividual IRI="#online_serial"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Support"/>
+        <NamedIndividual IRI="#phone"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ChangeManagement"/>
+        <NamedIndividual IRI="#process_to_prioritize_user_requests"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModelMetaDataRuntimeQuery"/>
+        <NamedIndividual IRI="#properties_of_the_numerical_grid"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModelMetaDataStaticQuery"/>
+        <NamedIndividual IRI="#properties_of_the_numerical_grid_sq"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BasicCapabilities"/>
+        <NamedIndividual IRI="#provides_a_software_framework"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BasicCapabilities"/>
+        <NamedIndividual IRI="#provides_data_structures_for_describing_numerical_grids"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ParallelLibrary"/>
+        <NamedIndividual IRI="#pthreads"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ImplementationLanguage"/>
+        <NamedIndividual IRI="#python"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ClientLanguageBindings"/>
+        <NamedIndividual IRI="#python_clb"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModelMetadataProvision"/>
+        <NamedIndividual IRI="#read_from_a_configuration_file_in_an_infrastructure-specific_format"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModelMetadataProvision"/>
+        <NamedIndividual IRI="#read_from_configuration_file_in_a_standard_format"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DataExchangeMechanism"/>
+        <NamedIndividual IRI="#shared_memory"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CoordinateSystem"/>
+        <NamedIndividual IRI="#spherical"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DistanceMeasure"/>
+        <NamedIndividual IRI="#straight_line"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DataExchangeMechanism"/>
+        <NamedIndividual IRI="#subroutine_or_method_argument_passing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BasicCapabilities"/>
+        <NamedIndividual IRI="#supports_parallelism"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Documentation"/>
+        <NamedIndividual IRI="#system_tests"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Tests"/>
+        <NamedIndividual IRI="#system_tests_T"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModelMetaDataRuntimeQuery"/>
+        <NamedIndividual IRI="#temporal_metadata"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModelMetaDataStaticQuery"/>
+        <NamedIndividual IRI="#temporal_metadata_sq"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TopologicalDimensions"/>
+        <NamedIndividual IRI="#three_D"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModelMetaDataRuntimeQuery"/>
+        <NamedIndividual IRI="#time_stepping_method"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ModelMetaDataStaticQuery"/>
+        <NamedIndividual IRI="#time_stepping_method_sq"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Support"/>
+        <NamedIndividual IRI="#training_courses"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TopologicalDimensions"/>
+        <NamedIndividual IRI="#two_D"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Options"/>
+        <NamedIndividual IRI="#ungridded_dimensions"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Mediation"/>
+        <NamedIndividual IRI="#unit_conversion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Documentation"/>
+        <NamedIndividual IRI="#unit_tests"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Tests"/>
+        <NamedIndividual IRI="#unit_tests_T"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TopologicalStructure"/>
+        <NamedIndividual IRI="#unstructured"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Documentation"/>
+        <NamedIndividual IRI="#user_guide_tutorials"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Options"/>
+        <NamedIndividual IRI="#vector_fields"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ChangeManagement"/>
+        <NamedIndividual IRI="#version_control"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DataExchangeMechanism"/>
+        <NamedIndividual IRI="#web_request"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Support"/>
+        <NamedIndividual IRI="#workshops"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasBasicCapabilities"/>
+        <NamedIndividual IRI="#CSDMS"/>
+        <NamedIndividual IRI="#Transfer_of_field_data_between_models"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasBasicCapabilities"/>
+        <NamedIndividual IRI="#CSDMS"/>
+        <NamedIndividual IRI="#supports_parallelism"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasBasicCapabilities"/>
+        <NamedIndividual IRI="#CSDMS"/>
+        <NamedIndividual IRI="#scientific_workflow"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasBasicCapabilities"/>
+        <NamedIndividual IRI="#CSDMS"/>
+        <NamedIndividual IRI="#Generation_of_spatial_interpolation_weights"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasLicense"/>
+        <NamedIndividual IRI="#CSDMS"/>
+        <NamedIndividual IRI="#Apache_License_2.0"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasModelComponentRef"/>
+        <NamedIndividual IRI="#CSDMS"/>
+        <NamedIndividual IRI="#an_object"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasBasicCapabilities"/>
+        <NamedIndividual IRI="#ESMF"/>
+        <NamedIndividual IRI="#Transfer_of_field_data_between_models"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasBasicCapabilities"/>
+        <NamedIndividual IRI="#ESMF"/>
+        <NamedIndividual IRI="#Generation_of_spatial_interpolation_weights"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasLicense"/>
+        <NamedIndividual IRI="#ESMF"/>
+        <NamedIndividual IRI="#MIT_License"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasModelComponentRef"/>
+        <NamedIndividual IRI="#ESMF"/>
+        <NamedIndividual IRI="#an_instance_of_a_Fortran_derived_type_or_C_struct"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasModelComponentAbstraction"/>
+        <NamedIndividual IRI="#CSDMS"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOpenSource"/>
+        <NamedIndividual IRI="#CSDMS"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasModelComponentAbstraction"/>
+        <NamedIndividual IRI="#ESMF"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOpenSource"/>
+        <NamedIndividual IRI="#ESMF"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasControlRegime"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasLicense"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasBasicCapabilities"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasChangeManagement"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasClientLanguageBindings"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasControlRegime"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCoordinateDimensions"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCoordinateSystem"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDataExchangeMechanism"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDecompositionSpecTransport"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDecompositionTypeTransport"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDesignIntentGeneral"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDistanceMeasure"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDocumentation"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDriverCustomization"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasExternalSoftwareDependencies"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasFieldPrimingTransport"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasImplementationLanguage"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasLicense"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMaxPolygonEdges"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMediation"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMetaDataOutput"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMetaDataOutputFormats"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasModelComponentRef"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasModelExecutionConcurrency"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasModelMetadataFlow"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasModelMetadataProvision"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasModelMetadataProvisionFormats"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasModelMetadataRuntimeQuery"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasModelMetadataStaticQuery"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMultiExecutable"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasOptions"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasOptionsGridDescription"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasOptionsTransport"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasParallelLibrary"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasParallelism"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRepartitioningTransport"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSupport"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSupportedModels"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSupportedOperatingSystems"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSupportedPlatforms"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTemporal"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTests"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTopologicalDimensions"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTopologicalStructure"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasWeightApplicationExecution"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasWeightApplicationInterpolationMethod"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasWeightGenerationExecution"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasWeightGenerationInterpolationMethod"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#supportsCompilers"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasBasicCapabilities"/>
+        <Class IRI="#BasicCapabilities"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasChangeManagement"/>
+        <Class IRI="#ChangeManagement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasClientLanguageBindings"/>
+        <Class IRI="#ClientLanguageBindings"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasControlRegime"/>
+        <Class IRI="#ControlRegime"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCoordinateDimensions"/>
+        <Class IRI="#CoordinateDimensions"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCoordinateSystem"/>
+        <Class IRI="#CoordinateSystem"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDataExchangeMechanism"/>
+        <Class IRI="#DataExchangeMechanism"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDecompositionSpecTransport"/>
+        <Class IRI="#DecompositionSpec_Transport"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDecompositionTypeTransport"/>
+        <Class IRI="#DecompositionType_Transport"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDesignIntentGeneral"/>
+        <Class IRI="#DesignIntent_General"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDistanceMeasure"/>
+        <Class IRI="#DistanceMeasure"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDocumentation"/>
+        <Class IRI="#Documentation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDriverCustomization"/>
+        <Class IRI="#DriverCustomization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasExternalSoftwareDependencies"/>
+        <Class IRI="#ExternalSoftwareDependencies"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasFieldPrimingTransport"/>
+        <Class IRI="#FieldPriming_Transport"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasImplementationLanguage"/>
+        <Class IRI="#ImplementationLanguage"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasLicense"/>
+        <Class IRI="#License"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMaxPolygonEdges"/>
+        <Class IRI="#MaxPolygonEdges"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMediation"/>
+        <Class IRI="#Mediation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMetaDataOutput"/>
+        <Class IRI="#MetaDataOutput"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMetaDataOutputFormats"/>
+        <Class IRI="#MetaDataOutputFormats"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasModelComponentRef"/>
+        <Class IRI="#ModelComponentRef"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasModelExecutionConcurrency"/>
+        <Class IRI="#ModelExecutionConcurrency"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasModelMetadataFlow"/>
+        <Class IRI="#ModelMetadataFlow"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasModelMetadataProvision"/>
+        <Class IRI="#ModelMetadataProvision"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasModelMetadataProvisionFormats"/>
+        <Class IRI="#ModelMetadataProvisionFormats"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasModelMetadataRuntimeQuery"/>
+        <Class IRI="#ModelMetaDataRuntimeQuery"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasModelMetadataStaticQuery"/>
+        <Class IRI="#ModelMetaDataStaticQuery"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMultiExecutable"/>
+        <Class IRI="#MultiExecutable"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasOptions"/>
+        <Class IRI="#Options"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasOptionsGridDescription"/>
+        <Class IRI="#Options_GridDescription"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasOptionsTransport"/>
+        <Class IRI="#Options_Transport"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasParallelLibrary"/>
+        <Class IRI="#ParallelLibrary"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasParallelism"/>
+        <Class IRI="#Parallelism"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRepartitioningTransport"/>
+        <Class IRI="#Repartitioning_Transport"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSupport"/>
+        <Class IRI="#Support"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSupportedModels"/>
+        <Class IRI="#SupportedModels"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSupportedOperatingSystems"/>
+        <Class IRI="#SupportedOperatingSystems"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSupportedPlatforms"/>
+        <Class IRI="#SupportedPlatforms"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTemporal"/>
+        <Class IRI="#Temporal"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTests"/>
+        <Class IRI="#Tests"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTopologicalDimensions"/>
+        <Class IRI="#TopologicalDimensions"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTopologicalStructure"/>
+        <Class IRI="#TopologicalStructure"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasWeightApplicationExecution"/>
+        <Class IRI="#WeightApplicationExecution"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasWeightApplicationInterpolationMethod"/>
+        <Class IRI="#WeightApplicationInterpolationMethod"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasWeightGenerationExecution"/>
+        <Class IRI="#WeightGenerationExecution"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasWeightGenerationInterpolationMethod"/>
+        <Class IRI="#WeightGenerationInterpolationMethod"/>
+    </ObjectPropertyRange>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasDeveloperDocumentation"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasModelComponentAbstraction"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasOpenSource"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasSparseMatrixMultiplication"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDeveloperDocumentation"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasModelComponentAbstraction"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasOpenSource"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSparseMatrixMultiplication"/>
+        <Class IRI="#ModellingInfrastructure"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDeveloperDocumentation"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasModelComponentAbstraction"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasOpenSource"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSparseMatrixMultiplication"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#AngleConversion</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Angle conversion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AngleConversion</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Angle conversion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Apache_Licence_2.0</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Apache licence 2.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#AppSpatialInterpWts</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Application of spatial interpolation weights</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AppSpatialInterpWts</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Application of spatial interpolation weights</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#BSD_2-Clause_Licence</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">BSD 2 Clause Licence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#BSD_3-Clause_Licence</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">BSD 3 Clause Licence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#BasicCapabilities</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">BasicCapabilities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#BasicCapabilities</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Longer description</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#BasicCapabilities</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Basic Capabilities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#Build_and_or_Configuration_management</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Build and or Configuration management</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Build_and_or_Configuration_management</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Build and or Configuration management</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CSDMS</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">CSDMS</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Cartesian</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Cartesian</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ChangeManagement</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Change Management</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ClientLanguageBindings</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Client Language Bindings</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Contiguous_blocks</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Contiguous blocks</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ControlRegime</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Control Regime</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CoordinateDimensions</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Coordinate Dimensions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CoordinateSystem</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Coordinate System</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DataExchangeMechanism</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Data Exchange Mechanism</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DecompositionSpec_Transport</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Decomposition Spec Transport</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DecompositionType_Transport</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Decomposition Type Transport</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#Defines_an_interface_for_models</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Defines an interface for models</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Defines_an_interface_for_models</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Defines an interface for models</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DesignIntent_General</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Design Intent General</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DistanceMeasure</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Distance Measure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Documentation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Documentation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DriverCustomization</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Driver Customization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ESMF</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ESMF</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ExternalSoftwareDependencies</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">External Software Dependencies</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FieldPriming_Transport</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Field Priming Transport</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GNU_General_Public_Licence</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">GNU general public licence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GNU_Lesser_General_Public_Licence</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">GNU lesser general public licence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#Generation_of_spatial_interpolation_weights</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Generation of spatial interpolation weights</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Generation_of_spatial_interpolation_weights</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Generation of spatial interpolation weights</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ImplementationLanguage</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Implementation Language</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#License</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">License</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Linux</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Linux</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MCT</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">MCT</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MIT_Licence</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">MIT licence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MPI</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">MPI</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MPI_dem</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">MPI dem</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Mac</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Mac</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MaxPolygonEdges</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Max Polygon Edges</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Mediation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Mediation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MetaDataOutput</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Meta Data Output</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MetaDataOutputFormats</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Meta Data Output Formats</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ModelComponentRef</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Model Component Ref</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ModelExecutionConcurrency</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Model Execution Concurrency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ModelMetaDataRuntimeQuery</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Model Metadata Runtime Query</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ModelMetaDataStaticQuery</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Model Metadata Static Query</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ModelMetadataFlow</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Model Metadata Flow</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ModelMetadataProvision</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Model Metadata Provision</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ModelMetadataProvisionFormats</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Model Metadata Provision Formats</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ModellingInfrastructure</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Modelling Infrastructure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MultiExecutable</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Multi Executable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OASIS</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">OASIS</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#One_D</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">One d</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#One_D_segments</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">One d segments</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OpenACC</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">OpenACC</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OpenMP</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">OpenMP</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Opensource</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Opensource</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Options</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Options</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Options_GridDescription</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Options Grid Description</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Options_Transport</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Options Transport</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ParallelLibrary</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Parallel Library</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Parallelism</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Parallelism</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Poles</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Poles</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#Programming_Language_interoperability</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Programming language interoperability</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Programming_Language_interoperability</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Programming language interoperability</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#Provides_data_structures_for_storing_model_fields</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Provides data structures for storing model fields</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Provides_data_structures_for_storing_model_fields</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Provides data structures for storing model fields</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Repartitioning_Transport</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Repartitioning Transport</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#Semantic_mediation_of_model_weights</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Semantic mediation of model weights</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Semantic_mediation_of_model_weights</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Semantic mediation of model weights</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Source_code_annotations</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Source code annotations</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Support</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Support</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SupportedModels</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Supported Models</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SupportedOperatingSystems</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Supported Operating Systems</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SupportedPlatforms</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Supported Platforms</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SwappableComponents</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Swappable Components</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Temporal</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Temporal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#Temporal_Interpolation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Temporal interpolation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Temporal_Interpolation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Temporal interpolation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Tests</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Tests</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Three_D</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Three d</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TopologicalDimensions</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Topological Dimensions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TopologicalStructure</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Topological Structure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#TransferFieldData</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Transfer of field data between models</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TransferFieldData</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Transfer of field data between models</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Two_D</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Two d</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#Unit_Conversion</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Unit Conversion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Unit_Conversion</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Unit Conversion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#WeightApplicationExecution</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Weight Application Execution</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#WeightApplicationInterpolationMethod</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Weight Application Interpolation Method</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#WeightGenerationExecution</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Weight Generation Execution</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#WeightGenerationInterpolationMethod</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Weight Generation Interpolation Method</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Windows</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Windows</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#Workflow</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Workflow</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Workflow</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Workflow</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#accumulation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Accumulation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#adaptive</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Adaptive</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#adaptive_coupling_frequency</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Adaptive coupling frequency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#an_identifier_such_as_an_integer_or_string</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">An identifier such as an integer or string</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#an_instance_of_a_Fortran_derived_type_or_C_struct</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">An instance of a Fortran derived type or C struct</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#an_object_in_an_object-oriented_language</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">An object in an object oriented language</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#arbitrary_user_assigned</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Arbitrary user assigned</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#averaging</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Averaging</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#between_different_decompositions</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Between different decompositions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#bilinear_trilinear</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bilinear trilinear</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#bilinear_trilinear_waim</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bilinear trilinear waim</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#bundles</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bundles</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#by_changing_configuration_metadata</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">By changing configuration metadata</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#by_changing_model_field_data_dependencies</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">By changing model field data dependencies</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#by_specializing_a_generic_driver</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">By specializing a generic driver</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#c</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">C</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#c_clb</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">C clb</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#cloud</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Cloud</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#cluster</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Cluster</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#completion_of_coupling_fields_with_external_data</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Completion of coupling fields with external data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#comprehensive_API_Reference</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Comprehensive API reference</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#conditional_target</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Conditional target</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#coupler_is_a_seperate_executable</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Coupler is a seperate executable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#cplusplus</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Cplusplus</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#cplusplus_clb</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Cplusplus clb</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#csharp</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Csharp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#csharp_clb</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Csharp clb</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#described_globally</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Described globally</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#described_locally</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Described locally</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#desktop_laptop</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Desktop laptop</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#directly_in_source_code_eg_API_calls</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Directly in source code eg API calls</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#email</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Email</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#entire_application_is_a_single_executable</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Entire application is a single executable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#event_based</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Event based</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#example_application_code</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Example application code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#execution_methods</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Execution methods</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#execution_methods_sq</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Execution methods sq</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#explicit_control_control_thread_is_in_a_driver_written_mostly_entirely_by_the_user</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Explicit control control thread is in a driver written mostly entirely by the user</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#explicit_control_control_thread_is_in_a_generic_driver</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Explicit control control thread is in a generic driver</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#explicit_control_control_thread_is_in_a_generic_driver_that_can_be_customized_specialized_by_user</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Explicit control control thread is in a generic driver that can be customized specialized by user</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#extrapolation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Extrapolation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#extrapolation_outside_source_domain</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Extrapolation outside source domain</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#extrapolation_outside_source_domain_waim</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Extrapolation outside source domain waim</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#field_combination_merging</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Field combination merging</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#file</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">File</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#file_to_file</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">File to file</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#first_order_conservative</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">First order conservative</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#first_order_conservative_wain</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">First order conservative waim</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#fortran</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Fortran</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#fortran_clb</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Fortran clb</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#forum</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Forum</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#from_constant_or_function</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">From constant or function</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#from_file</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">From file</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#from_memory</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">From memory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#great_circle</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Great circle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasBasicCapabilities</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">BasicCapabilities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasBasicCapabilities</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BasicCapabilities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasChangeManagement</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ChangeManagement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasChangeManagement</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ChangeManagement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasClientLanguageBindings</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ClientLanguageBindings</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasClientLanguageBindings</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ClientLanguageBindings</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasControlRegime</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ControlRegime</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasControlRegime</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ControlRegime</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasCoordinateDimensions</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">CoordinateDimensions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCoordinateDimensions</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">CoordinateDimensions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasCoordinateSystem</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">CoordinateSystems</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCoordinateSystem</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">CoordinateSystem</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasDataExchangeMechanism</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">DataExchangeMechanism</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasDataExchangeMechanism</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DataExchangeMechanism</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasDecompositionSpecTransport</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">TransportDecompositionSpec</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasDecompositionSpecTransport</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TransportDecompositionSpec</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasDecompositionTypeTransport</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">TransportDecompositionType</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasDecompositionTypeTransport</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TransportDecompositionType</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasDesignIntentGeneral</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">DesignIntent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasDesignIntentGeneral</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DesignIntent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasDeveloperDocumentation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">DeveloperDocumentation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasDeveloperDocumentation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DeveloperDocumentation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasDistanceMeasure</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">DistanceMeasure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasDistanceMeasure</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DistanceMeasure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasDocumentation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Documentation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasDocumentation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Documentation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasDriverCustomization</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">DriverCustomization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasDriverCustomization</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DriverCustomization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasExternalSoftwareDependencies</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ExternalSoftwareDependencies</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasExternalSoftwareDependencies</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ExternalSoftwareDependencies</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasFieldPrimingTransport</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">FieldPriming</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasFieldPrimingTransport</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FieldPriming</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasImplementationLanguage</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ImplementationLanguage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasImplementationLanguage</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ImplementationLanguage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasLicense</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">License</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasLicense</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">License</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasMaxPolygonEdges</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">MaxPolygonEdges</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasMaxPolygonEdges</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">MaxPolygonEdges</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasMediation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Mediation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasMediation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Mediation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasMetaDataOutput</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">MetaDataOutput</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasMetaDataOutput</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">MetaDataOutput</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasMetaDataOutputFormats</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">MetaDataOutputFormat</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasMetaDataOutputFormats</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">MetaDataOutputFormat</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasModelComponentAbstraction</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ModelComponentAbstraction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasModelComponentAbstraction</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ModelComponentAbstraction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasModelComponentRef</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ModelComponentRef</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasModelComponentRef</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ModelComponentRef</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasModelExecutionConcurrency</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ModelExecutionConcurrency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasModelExecutionConcurrency</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ModelExecutionConcurrency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasModelMetadataFlow</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ModelMetaDataFlow</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasModelMetadataFlow</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ModelMetaDataFlow</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasModelMetadataProvision</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ModelMetaDataProvision</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasModelMetadataProvision</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ModelMetaDataProvision</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasModelMetadataProvisionFormats</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ModelMetaDataProvisionFormats</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasModelMetadataProvisionFormats</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ModelMetaDataProvisionFormats</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasModelMetadataRuntimeQuery</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ModelMetaDataRuntimeQuery</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasModelMetadataRuntimeQuery</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ModelMetaDataRuntimeQuery</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasModelMetadataStaticQuery</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ModelMetaDataStaticQuery</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasModelMetadataStaticQuery</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ModelMetaDataStaticQuery</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasMultiExecutable</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">MultiExecutable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasMultiExecutable</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">MultiExecutable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasOpenSource</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Opensource</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasOpenSource</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">OpenSource</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasOptions</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">RepresentationOptions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasOptions</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">RepresentationOptions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasOptionsGridDescription</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">GridDescriptionOptions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasOptionsGridDescription</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">GridDescriptionOptions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasOptionsTransport</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">TransportOptions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasOptionsTransport</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TransportOptions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasParallelLibrary</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ParallelLibraries</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasParallelLibrary</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ParallelLibraries</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasParallelism</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Parallelism</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasParallelism</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Parallelism</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasRepartitioningTransport</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Repartitioning</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasRepartitioningTransport</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Repartitioning</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasSparseMatrixMultiplication</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">SparseMatrixMultiplication</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasSparseMatrixMultiplication</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SparseMatrixMultiplication</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasSupport</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">UserSupportTypes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasSupport</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">UserSupportTypes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasSupportedModels</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">UserSupportModels</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasSupportedModels</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">UserSupportModels</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasSupportedOperatingSystems</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">supportedOperatingSystems</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasSupportedOperatingSystems</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SupportedOperatingSystems</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasSupportedPlatforms</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">supportedPlatforms</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasSupportedPlatforms</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SupportedPlatforms</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasTemporal</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Temporal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasTemporal</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Temporal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasTests</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Tests</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasTests</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tests</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasTopologicalDimensions</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">TopologicalDimensions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasTopologicalDimensions</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TopologicalDimensions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasTopologicalStructure</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">TopologicalStructure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasTopologicalStructure</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TopologicalStructure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasWeightApplicationExecution</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">WeightApplicationExecution</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasWeightApplicationExecution</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">WeightApplicationExecution</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasWeightApplicationInterpolationMethod</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">WeightApplicationInterpolationMethods</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasWeightApplicationInterpolationMethod</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">WeightApplicationInterpolationMethods</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasWeightGenerationExecution</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">WeightGenerationExecution</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasWeightGenerationExecution</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">WeightGenerationExecution</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#hasWeightGenerationInterpolationMethod</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">WeightGenerationInterpolationMethod</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasWeightGenerationInterpolationMethod</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">WeightGenerationInterpolationMethod</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#higher_order_conservative</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Higher order conservative</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#higher_order_conservative_wain</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Higher order conservative waim</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#higher_order_non_conservative</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Higher order non conservative</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#higher_order_non_conservative_wain</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Higher order non conservative waim</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#implicit_control_model_retain_control_and_control_sequence_is_determined_by_data_dependencies</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Implicit control model retain control and control sequence is determined by data dependencies</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#in_a_standardized_format</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">In a standardized format</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#in_an_infrastructure_specific_format</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">In an infrastructure specific format</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#interpolation_linear</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Interpolation linear</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#interpolation_quadratic</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Interpolation quadratic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#interpolation_stairstep</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Interpolation stairstep</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#issue_tracker</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Issue tracker</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#java</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Java</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#java_clb</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Java clb</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#land_ocean_coastline_consistency_checking</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Land ocean coastline consistency checking</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#list_of_input_physical_fields</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">List of input physical fields</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#list_of_input_physical_fields_sq</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">List of input physical fields sq</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#list_of_output_physical_fields</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">List of output physical fields</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#list_of_output_physical_fields_sq</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">List of output physical fields sq</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#location_stream</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Location stream</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#logically_rectangular</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Logically rectangular</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#masking</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Masking</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#mechanism_for_community_contribution</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Mechanism for community contribution</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#mediates_between_parallel_and_serial_codes</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Mediates between parallel and serial codes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#mediates_between_parallel_and_serial_codes</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Mediates between parallel and serial codes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#metadata_flows_from_driver_infrastructure_to_model_components</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Metadata flows from driver infrastructure to model components</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#metadata_flows_from_model_components_to_infrastructure_driver</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Metadata flows from model components to infrastructure driver</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#minimum_or_maximum_in_time</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Minimum or maximum in time</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#models_are_seperate_executables</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Models are seperate executables</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#models_can_execute_concurrently</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Models can execute concurrently</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#models_can_execute_sequentially</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Models can execute sequentially</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#multi_tile</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Multi tile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#multiprocessing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Multiprocessing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#multithreading</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Multithreading</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#nearest_neighbour</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Nearest neighbour</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#nearest_neighbour_waim</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Nearest neighbour waim</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#nesting</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Nesting</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#non_conformal</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Non conformal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#non_geometrical</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Non geometrical</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#non_geometrical_waim</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Non geometrical waim</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#offline_parallel</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Offline parallel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#offline_serial</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Offline serial</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#one_D</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">One d</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#one_to_many</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">One to many</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#online</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Online</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#online_parallel</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Online parallel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#online_reusable</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Online reusable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#online_serial</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Online serial</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#phone</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#process_to_prioritize_user_requests</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Process to prioritize user requests</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#properties_of_the_numerical_grid</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Properties of the numerical grid</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#properties_of_the_numerical_grid_sq</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Properties of the numerical grid sq</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#provides_a_software_framework</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Provides a software framework</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#provides_a_software_framework</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Provides a software framework</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#provides_data_structures_for_describing_numerical_grids</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Provides data structures for describing numerical grids</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#provides_data_structures_for_describing_numerical_grids</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Provides data structures for describing numerical grids</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#pthreads</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Pthreads</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#python</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Python</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#python_clb</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Python clb</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#read_from_a_configuration_file_in_an_infrastructure-specific_format</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Read from a configuration file in an infrastructure specific format</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#read_from_configuration_file_in_a_standard_format</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Read from configuration file in a standard format</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#shared_memory</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Shared memory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#spherical</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Spherical</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#straight_line</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Straight line</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#subroutine_or_method_argument_passing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Subroutine or method argument passing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#supportsCompilers</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">SupportedCompilers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#supportsCompilers</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SupportedCompilers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#XMLMapping"/>
+        <IRI>#supports_parallelism</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Supports parallelism</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#supports_parallelism</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Supports parallelism</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#system_tests</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">System tests</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#system_tests_T</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">System tests T</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#temporal_metadata</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Temporal metadata</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#temporal_metadata_sq</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Temporal metadata sq</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#three_D</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Three d</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#time_stepping_method</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Time stepping method</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#time_stepping_method_sq</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Time stepping method sq</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#training_courses</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Traning courses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#two_D</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Two d</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ungridded_dimensions</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Ungridded dimensions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#unit_conversion</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Unit conversion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#unit_tests</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Unit tests</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#unit_tests_T</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Unit tests T</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#unstructured</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Unstructured</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#user_guide_tutorials</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">User guide tutorials</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#vector_fields</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vector fields</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#version_control</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Version control</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#web_request</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Web request</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#workshops</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Workshops</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
