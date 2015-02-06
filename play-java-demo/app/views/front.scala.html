@@ -1,0 +1,87 @@
+@(title: String = "front")
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" href="@routes.Assets.at("javascripts/jqwidgets/styles/jqx.base.css")" type="text/css" />
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/scripts/jquery-1.11.1.min.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/jqwidgets/jqxcore.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/jqwidgets/jqxdockpanel.js")"></script>
+	<script type="text/javascript" src="@routes.Assets.at("javascripts/jqwidgets/jqxbuttons.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/jqwidgets/jqxscrollbar.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/jqwidgets/jqxdatatable.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/jqwidgets/jqxtreegrid.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/jqwidgets/jqxdata.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/jqwidgets/jqxcheckbox.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/jqwidgets/jqxlistbox.js")"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // Create jqxDockPanel
+            $("#jqxDockPanel").jqxDockPanel({ width: document.body.clientWidth, height: document.body.clientHeight});
+			
+            var source =
+             {
+                 dataType: "json",
+                 dataFields: [
+                      { name: "label", type: "string" },
+                      { name: "iri", type: "string" },
+                      { name: "group1", type: "string" },
+                      { name: "group2", type: "string" }
+                 ],
+                 hierarchy:
+                    {
+                        groupingDataFields:
+                            [
+                                {
+                                    name: "group1"
+                                }
+                            ]
+                    },
+                 id: "iri",
+                 url: "/owl/searchtree"
+             };
+
+            var dataAdapter = new $.jqx.dataAdapter(source, {
+                loadComplete: function () {
+
+                }
+            });
+            
+            // create jqxTreeGrid.
+            $("#first").jqxTreeGrid(
+            {
+                source: dataAdapter,
+                altRows: false,
+                width: 600,
+                checkboxes: function (rowKey, dataRow) {
+				    var level = dataRow.level;
+				    if (level == 0) {
+				        return true;
+				    }
+				    return true;
+				},
+                ready: function () {
+                    //$("#first").jqxTreeGrid('expandRow', '1');
+                    //$("#first").jqxTreeGrid('expandRow', '2');
+                },
+                columns: [
+                  { text: "Group1", align: "center", dataField: "group1", width: 200 },
+                  { text: "Group2", align: "center", dataField: "group2", width: 200 },
+                  { text: "Label", align: "center", dataField: "label", width: 200 }                 
+                ]
+            });
+            // Apply custom layout depending on the user's choice.
+        });
+    </script>
+</head>
+<body class='default'>
+    <div id='jqxWidget' style="width: 300px; height: 600px; font-size: 13px; font-family: Verdana;">
+        <div id='jqxDockPanel'>
+            <div id='first' dock='left' style='width: 300px; background: #C0C0C0;'></div>
+            <div id='second' dock='top' style='height: 100px; background: #CCFFFF;'></div>
+            <div id='third' dock='right' style='background: #909090;'></div>
+        </div>
+    </div>
+</body>
+</html>

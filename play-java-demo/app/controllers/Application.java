@@ -6,8 +6,10 @@ import play.data.Form;
 import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
+
 import views.html.index;
 import views.html.submit;
+import views.html.front;
 
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
@@ -18,6 +20,10 @@ public class Application extends Controller {
 
 	public static Result index() {
 		return ok(index.render(modellingInfraForm));
+	}
+	
+	public static Result front() {
+		return ok(front.render(""));
 	}
 
 	public static Result submit() {

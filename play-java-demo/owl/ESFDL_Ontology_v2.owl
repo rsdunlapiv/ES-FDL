@@ -1197,6 +1197,11 @@
         <Literal datatypeIRI="&xsd;string">Model Property</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GridAdaptive</IRI>
+        <Literal datatypeIRI="&xsd;string">Adaptive Grid</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty IRI="#uiSearchTreeItem"/>
         <IRI>#GridCoordinateSystem</IRI>
         <Literal datatypeIRI="&xsd;boolean">true</Literal>

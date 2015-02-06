@@ -5,6 +5,8 @@
 # Home page
 GET     /                           controllers.Application.index()
 
+GET     /front						controllers.Application.front()
+
 POST    /getname/                   controllers.Application.submit()
 
 GET     /name/:id                   controllers.Application.getNames(id: String)
