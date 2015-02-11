@@ -1376,6 +1376,71 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#uiSearchTreeOrder"/>
+        <IRI>#Mediation</IRI>
+        <Literal datatypeIRI="&xsd;int">30</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#uiSearchTreeTopLevel"/>
+        <IRI>#Mediation</IRI>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Mediation_AngleConversion</IRI>
+        <Literal datatypeIRI="&xsd;string">Angle Conversion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Mediation_DomainInterfaceConsistencyChecking</IRI>
+        <Literal datatypeIRI="&xsd;string">Domain Interface Consistency Checking</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Mediation_FieldMerging</IRI>
+        <Literal datatypeIRI="&xsd;string">Field Merging</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Mediation_ParallelToParallelRepartitioning</IRI>
+        <Literal datatypeIRI="&xsd;string">Parallel to Parallel Repartitioning</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Mediation_ParallelToSerialRepartitioning</IRI>
+        <Literal datatypeIRI="&xsd;string">Parallel to Serial Repartitioning</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Mediation_ProgrammingLanguageInteroperability</IRI>
+        <Literal datatypeIRI="&xsd;string">Programming Language Interoperability</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Mediation_Scientific</IRI>
+        <Literal datatypeIRI="&xsd;string">Scientific Mediation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Mediation_SemanticFieldBrokering</IRI>
+        <Literal datatypeIRI="&xsd;string">Semantic Field Brokering</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Mediation_SpatialInterpolation</IRI>
+        <Literal datatypeIRI="&xsd;string">Spatial Interpolation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Mediation_TemporalInterpolation</IRI>
+        <Literal datatypeIRI="&xsd;string">Temporal Interpolation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Mediation_UnitConversion</IRI>
+        <Literal datatypeIRI="&xsd;string">Unit Conversion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#uiSearchTreeOrder"/>
         <IRI>#ModelProperty</IRI>
         <Literal datatypeIRI="&xsd;int">10</Literal>
     </AnnotationAssertion>
