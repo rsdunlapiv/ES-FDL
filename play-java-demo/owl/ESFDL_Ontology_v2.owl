@@ -404,7 +404,7 @@
         <AnnotationProperty IRI="#uiSearchTreeItemGroup2"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="#uiTopLevel"/>
+        <AnnotationProperty IRI="#uiSearchTreeTopLevel"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="#Query1"/>
@@ -500,6 +500,7 @@
     </SubClassOf>
     <DisjointClasses>
         <Class IRI="#CompositionProperty"/>
+        <Class IRI="#Mediation"/>
         <Class IRI="#ModelProperty"/>
         <Class IRI="#ModelingInfrastructure"/>
     </DisjointClasses>
@@ -1157,7 +1158,7 @@
         <Literal datatypeIRI="&xsd;string">CSDMS</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="#uiTopLevel"/>
+        <AnnotationProperty IRI="#uiSearchTreeTopLevel"/>
         <IRI>#CompositionProperty</IRI>
         <Literal datatypeIRI="&xsd;boolean">true</Literal>
     </AnnotationAssertion>
@@ -1227,7 +1228,7 @@
         <Literal datatypeIRI="&xsd;string">MCT</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="#uiTopLevel"/>
+        <AnnotationProperty IRI="#uiSearchTreeTopLevel"/>
         <IRI>#ModelProperty</IRI>
         <Literal datatypeIRI="&xsd;boolean">true</Literal>
     </AnnotationAssertion>
