@@ -1168,54 +1168,24 @@
         <Literal datatypeIRI="&xsd;string">Composition Property</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="#uiSearchTreeItem"/>
-        <IRI>#CouplingFrequency</IRI>
-        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CouplingFrequency_Conditional</IRI>
+        <Literal datatypeIRI="&xsd;string">Conditional</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="#uiSearchTreeItemGroup1"/>
-        <IRI>#CouplingFrequency</IRI>
-        <Literal datatypeIRI="&xsd;string">Composition Property</Literal>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CouplingFrequency_Dynamic</IRI>
+        <Literal datatypeIRI="&xsd;string">Dynamic</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="#uiSearchTreeItem"/>
-        <IRI>#FieldConnection</IRI>
-        <Literal datatypeIRI="&xsd;boolean">true</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="#uiSearchTreeItemGroup1"/>
-        <IRI>#FieldConnection</IRI>
-        <Literal datatypeIRI="&xsd;string">Composition Property</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="#uiSearchTreeItem"/>
-        <IRI>#GridAdaptive</IRI>
-        <Literal datatypeIRI="&xsd;boolean">true</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="#uiSearchTreeItemGroup1"/>
-        <IRI>#GridAdaptive</IRI>
-        <Literal datatypeIRI="&xsd;string">Model Property</Literal>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CouplingFrequency_Fixed</IRI>
+        <Literal datatypeIRI="&xsd;string">Fixed</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#GridAdaptive</IRI>
         <Literal datatypeIRI="&xsd;string">Adaptive Grid</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="#uiSearchTreeItem"/>
-        <IRI>#GridCoordinateSystem</IRI>
-        <Literal datatypeIRI="&xsd;boolean">true</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="#uiSearchTreeItemGroup1"/>
-        <IRI>#GridCoordinateSystem</IRI>
-        <Literal datatypeIRI="&xsd;string">Model Property</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="#uiSearchTreeItem"/>
-        <IRI>#GridDistanceMeasure</IRI>
-        <Literal datatypeIRI="&xsd;boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

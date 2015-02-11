@@ -1,4 +1,4 @@
-name := """play-java-demo"""
+name := """es-fdl"""
 
 version := "1.0-SNAPSHOT"
 
