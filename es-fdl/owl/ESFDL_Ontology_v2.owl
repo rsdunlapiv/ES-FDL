@@ -80,9 +80,6 @@
         <Class IRI="#IterationProperty"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#LogicallyRectangular"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Mediation"/>
     </Declaration>
     <Declaration>
@@ -395,6 +392,9 @@
         <AnnotationProperty IRI="#XMLMapping"/>
     </Declaration>
     <Declaration>
+        <AnnotationProperty IRI="#uiSearchTreeExclude"/>
+    </Declaration>
+    <Declaration>
         <AnnotationProperty IRI="#uiSearchTreeItem"/>
     </Declaration>
     <Declaration>
@@ -402,6 +402,9 @@
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="#uiSearchTreeItemGroup2"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#uiSearchTreeOrder"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="#uiSearchTreeTopLevel"/>
@@ -477,10 +480,6 @@
     <SubClassOf>
         <Class IRI="#IterationProperty"/>
         <Class IRI="#ModelProperty"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#LogicallyRectangular"/>
-        <Class IRI="#GridTopologicalStructure"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Query1"/>
@@ -618,23 +617,11 @@
         <NamedIndividual IRI="#GridTopologicalStructure_LogicallyRectangularCurvilinear"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#LogicallyRectangular"/>
-        <NamedIndividual IRI="#GridTopologicalStructure_LogicallyRectangularCurvilinear"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#GridTopologicalStructure"/>
         <NamedIndividual IRI="#GridTopologicalStructure_LogicallyRectangularRectilinear"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#LogicallyRectangular"/>
-        <NamedIndividual IRI="#GridTopologicalStructure_LogicallyRectangularRectilinear"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#GridTopologicalStructure"/>
-        <NamedIndividual IRI="#GridTopologicalStructure_LogicallyRectangularUniform"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#LogicallyRectangular"/>
         <NamedIndividual IRI="#GridTopologicalStructure_LogicallyRectangularUniform"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1158,14 +1145,29 @@
         <Literal datatypeIRI="&xsd;string">CSDMS</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty IRI="#uiSearchTreeOrder"/>
+        <IRI>#CompositionProperty</IRI>
+        <Literal datatypeIRI="&xsd;int">20</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty IRI="#uiSearchTreeTopLevel"/>
         <IRI>#CompositionProperty</IRI>
         <Literal datatypeIRI="&xsd;boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CompositionProperty</IRI>
+        <Literal datatypeIRI="&xsd;string">Assumptions the infrastructure makes about compositions of models</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#CompositionProperty</IRI>
         <Literal datatypeIRI="&xsd;string">Composition Property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CouplingFrequency</IRI>
+        <Literal datatypeIRI="&xsd;string">Coupling Frequency</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1178,8 +1180,38 @@
         <Literal datatypeIRI="&xsd;string">Dynamic</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CouplingFrequency_Fixed</IRI>
+        <Literal datatypeIRI="&xsd;string">Coupling data exchages occur at a fixed rate, e.g., every six hours in model time or every fourth timestep.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#CouplingFrequency_Fixed</IRI>
+        <Literal datatypeIRI="&xsd;string">Fixed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ExecutionMethods</IRI>
+        <Literal datatypeIRI="&xsd;string">Execution Methods</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ExecutionMethods_ExecutionMethods</IRI>
+        <Literal datatypeIRI="&xsd;string">Execution Methods</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FieldConnection</IRI>
+        <Literal datatypeIRI="&xsd;string">Field Connection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FieldConnection_Conditional</IRI>
+        <Literal datatypeIRI="&xsd;string">Conditional</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FieldConnection_Fixed</IRI>
         <Literal datatypeIRI="&xsd;string">Fixed</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -1189,8 +1221,153 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GridAdaptive_GridAdaptive</IRI>
+        <Literal datatypeIRI="&xsd;string">Adaptive</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GridCoordinateSystem</IRI>
+        <Literal datatypeIRI="&xsd;string">Coordinate System</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GridCoordinateSystem_Cartesian</IRI>
+        <Literal datatypeIRI="&xsd;string">Cartesian</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GridCoordinateSystem_Spherical</IRI>
+        <Literal datatypeIRI="&xsd;string">Spherical</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GridDistanceMeasure</IRI>
+        <Literal datatypeIRI="&xsd;string">Distance Measure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GridDistanceMeasure_GreatCircle</IRI>
+        <Literal datatypeIRI="&xsd;string">Great Circle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GridDistanceMeasure_StraightLine</IRI>
+        <Literal datatypeIRI="&xsd;string">Straight Line</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GridMasking</IRI>
+        <Literal datatypeIRI="&xsd;string">Masking</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GridMasking_GridMasking</IRI>
+        <Literal datatypeIRI="&xsd;string">Masking</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GridMultiTile</IRI>
+        <Literal datatypeIRI="&xsd;string">Multiple Tiles</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GridMultiTile_GridMultiTile</IRI>
+        <Literal datatypeIRI="&xsd;string">Mutiple Tiles</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GridNesting</IRI>
+        <Literal datatypeIRI="&xsd;string">Nesting</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GridNesting_GridNesting</IRI>
+        <Literal datatypeIRI="&xsd;string">Nesting</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GridNonConformal</IRI>
+        <Literal datatypeIRI="&xsd;string">Nonconformal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GridNonConformal_GridNonConformal</IRI>
+        <Literal datatypeIRI="&xsd;string">Nonconformal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GridParallelDecomposition</IRI>
+        <Literal datatypeIRI="&xsd;string">Parallel Decomposition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GridParallelDecompositionSpec</IRI>
+        <Literal datatypeIRI="&xsd;string">Parallel Decomposition Specification</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GridParallelDecompositionSpec_Global</IRI>
+        <Literal datatypeIRI="&xsd;string">Globally Described</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GridParallelDecompositionSpec_Local</IRI>
+        <Literal datatypeIRI="&xsd;string">Locally Described</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GridParallelDecomposition_1DSegments</IRI>
+        <Literal datatypeIRI="&xsd;string">1D Segments</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GridParallelDecomposition_ContiguousBlocks</IRI>
+        <Literal datatypeIRI="&xsd;string">Contiguous Blocks</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GridParallelDecomposition_Pointwise</IRI>
+        <Literal datatypeIRI="&xsd;string">Pointwise</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#GridProperty</IRI>
         <Literal datatypeIRI="&xsd;string">Grid Property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GridTopologicalStructure</IRI>
+        <Literal datatypeIRI="&xsd;string">Topological Structure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GridTopologicalStructure_LogicallyRectangularCurvilinear</IRI>
+        <Literal datatypeIRI="&xsd;string">Logically Rectangular Curvlilinear</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GridTopologicalStructure_LogicallyRectangularRectilinear</IRI>
+        <Literal datatypeIRI="&xsd;string">Logically Rectangular Rectilinear</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GridTopologicalStructure_LogicallyRectangularUniform</IRI>
+        <Literal datatypeIRI="&xsd;string">Logically Rectangular Uniform</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GridTopologicalStructure_PointCloud</IRI>
+        <Literal datatypeIRI="&xsd;string">Point Cloud</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GridTopologicalStructure_Unstructured</IRI>
+        <Literal datatypeIRI="&xsd;string">Unstructured</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#IterationProperty</IRI>
+        <Literal datatypeIRI="&xsd;string">Iteration Property</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1198,9 +1375,19 @@
         <Literal datatypeIRI="&xsd;string">MCT</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty IRI="#uiSearchTreeOrder"/>
+        <IRI>#ModelProperty</IRI>
+        <Literal datatypeIRI="&xsd;int">10</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty IRI="#uiSearchTreeTopLevel"/>
         <IRI>#ModelProperty</IRI>
         <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ModelProperty</IRI>
+        <Literal datatypeIRI="&xsd;string">Assumptions the infrastructure makes about models</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1216,6 +1403,66 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OASIS</IRI>
         <Literal datatypeIRI="&xsd;string">OASIS</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SimulationMembership</IRI>
+        <Literal datatypeIRI="&xsd;string">Simulation Membership</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SimulationMembership_Dynamic</IRI>
+        <Literal datatypeIRI="&xsd;string">Dynamic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SimulationMembership_Static</IRI>
+        <Literal datatypeIRI="&xsd;string">Static</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#StepScheme</IRI>
+        <Literal datatypeIRI="&xsd;string">Step Scheme</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#StepScheme_Convergence</IRI>
+        <Literal datatypeIRI="&xsd;string">Convergence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#StepScheme_Explicit</IRI>
+        <Literal datatypeIRI="&xsd;string">Explicit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#StepScheme_Implicit</IRI>
+        <Literal datatypeIRI="&xsd;string">Implicit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#StepScheme_SemiImplicit</IRI>
+        <Literal datatypeIRI="&xsd;string">Semi-implicit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#StepSize</IRI>
+        <Literal datatypeIRI="&xsd;string">Step Size</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#StepSize_GlobalAdaptive</IRI>
+        <Literal datatypeIRI="&xsd;string">Global Adaptive</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#StepSize_GlobalFixed</IRI>
+        <Literal datatypeIRI="&xsd;string">Global Fixed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#StepSize_LocalAdaptive</IRI>
+        <Literal datatypeIRI="&xsd;string">Local Adaptive</Literal>
     </AnnotationAssertion>
 </Ontology>
 

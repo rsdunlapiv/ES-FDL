@@ -6,7 +6,6 @@
     
     <link rel="stylesheet" href="@routes.Assets.at("javascripts/jqwidgets/styles/jqx.base.css")" type="text/css" />
     
-    <!--
     <style>
 		#header {
 			background-color:#787878;
@@ -19,22 +18,23 @@
 			line-height:30px;
 			background-color:#eeeeee;
 			height:550px;
-			width:300px;
+			width:550px;
 			float:left;
 			padding:5px;
 			overflow:scroll;
 		}
 		#section1 {
 			margin-top:5px;
+			margin-left:5px;
 			background-color:#EFEFEF;
 			width:1000px;
 			height:530px;
-			float:right;
+			float:left;
 			padding:10px;
 		}
 	</style>
-	-->
 	
+	<!--
 	<style type="text/css">
         html, body
         {
@@ -45,7 +45,7 @@
             overflow: hidden;
         }
     </style>
-    
+    -->
     
     
     
@@ -74,6 +74,7 @@
                       { name: "label", type: "string" },
                       { name: "iri", type: "string" },
                       { name: "leaf", type: "bool" },
+                      { name: "desc", type: "string" }, 
                       { name: "children", type: "array" }
                  ],                 
                  hierarchy:
@@ -95,7 +96,7 @@
             {
                 source: dataAdapter,
                 altRows: false,
-                width: 300,
+                width: 500,
                 checkboxes: function (rowKey, dataRow) {
 				    var leaf = dataRow.leaf;
 				    return leaf;	
@@ -105,7 +106,8 @@
                     //$("#first").jqxTreeGrid('expandRow', '2');
                 },
                 columns: [
-                  { text: "Label", align: "center", dataField: "label", width: 300 }                
+                  { text: "Label", align: "left", dataField: "label", width: 300 },
+                  { text: "Description", align: "left", dataField: "desc", width: 200}             
                 ]      
             });
             // Apply custom layout depending on the user's choice.

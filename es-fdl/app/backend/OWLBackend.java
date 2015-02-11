@@ -2,6 +2,8 @@ package backend;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -17,9 +19,8 @@ import org.semanticweb.owlapi.model.OWLDataFactory;
 import org.semanticweb.owlapi.model.OWLEntity;
 import org.semanticweb.owlapi.model.OWLIndividual;
 import org.semanticweb.owlapi.model.OWLLiteral;
-import org.semanticweb.owlapi.model.OWLObject;
+import org.semanticweb.owlapi.model.OWLNamedIndividual;
 import org.semanticweb.owlapi.model.OWLOntology;
-import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.model.PrefixManager;
 import org.semanticweb.owlapi.util.DefaultPrefixManager;
@@ -32,12 +33,22 @@ public class OWLBackend {
 	private OWLDataFactory factory;
 	private PrefixManager pm;
 	
-	private static OWLAnnotationProperty annUISearchTreeItem; 
-	private static OWLAnnotationProperty annUISearchTreeItemGroup1; 
-	private static OWLAnnotationProperty annUISearchTreeItemGroup2; 
+	//private static OWLAnnotationProperty annUISearchTreeItem; 
+	//private static OWLAnnotationProperty annUISearchTreeItemGroup1; 
+	//private static OWLAnnotationProperty annUISearchTreeItemGroup2; 
 	private static OWLAnnotationProperty annUISearchTreeTopLevel;
+	private static OWLAnnotationProperty annUISearchTreeOrder;
 	
 	public OWLBackend() {
+		loadOntology();
+		//annUISearchTreeItem = factory.getOWLAnnotationProperty("#uiSearchTreeItem", pm);
+		//annUISearchTreeItemGroup1 = factory.getOWLAnnotationProperty("#uiSearchTreeItemGroup1", pm);
+		//annUISearchTreeItemGroup2 = factory.getOWLAnnotationProperty("#uiSearchTreeItemGroup2", pm);
+		annUISearchTreeTopLevel = factory.getOWLAnnotationProperty("#uiSearchTreeTopLevel", pm);
+		annUISearchTreeOrder = factory.getOWLAnnotationProperty("#uiSearchTreeOrder", pm);
+	}
+	
+	private void loadOntology() {
 		OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
 		File file = new File("owl/ESFDL_Ontology_v2.owl");
 		OWLOntology ontology = null;
@@ -52,36 +63,12 @@ public class OWLBackend {
 		this.factory = ontology.getOWLOntologyManager().getOWLDataFactory();
 		IRI ontologyIRI = ontology.getOntologyID().getOntologyIRI();
 		this.pm = new DefaultPrefixManager(ontologyIRI.toString());
-		
-		annUISearchTreeItem = factory.getOWLAnnotationProperty("#uiSearchTreeItem", pm);
-		annUISearchTreeItemGroup1 = factory.getOWLAnnotationProperty("#uiSearchTreeItemGroup1", pm);
-		annUISearchTreeItemGroup2 = factory.getOWLAnnotationProperty("#uiSearchTreeItemGroup2", pm);
-		annUISearchTreeTopLevel = factory.getOWLAnnotationProperty("#uiSearchTreeTopLevel", pm);
-		
 	}
 	
-	/*
-	public List<Map<?,?>> getSearchTree() {
-		
-		List<Map<?,?>> ret = new ArrayList<Map<?,?>>();
-		
-		Map<Object, Object> m1 = new HashMap<Object, Object>();
-		m1.put("m1a", "aaa");
-		m1.put("m1b", "bbb");
-		
-		Map<Object, Object> m2 = new HashMap<Object, Object>();
-		m2.put("m2a", "aaaaa");
-		m2.put("m2b", "bbbbbb");
-		m2.put("anothermap", m1);
-		
-		ret.add(m2);
-		
-		return ret;
-		
-	}
-	*/
 	
 	public List<Map<String,Object>> getSearchTree() {
+	
+		loadOntology();  //reloading every time while debugging, comment out before deploying
 		
 		List<Map<String,Object>> ret = new ArrayList<Map<String,Object>>();
 		
@@ -99,6 +86,7 @@ public class OWLBackend {
 			}
 		}
 	
+		sort(ret);
 		return ret;
 		
 	}
@@ -108,6 +96,11 @@ public class OWLBackend {
 		Map<String, Object> fields = new HashMap<String, Object>();
 		fields.put("iri", c.getIRI().toString());
 		fields.put("label", getLabel(c));
+		String desc = getAnnotationPropertyValue(c, factory.getRDFSComment());
+		if (desc != null) {
+			fields.put("desc", desc);
+		}
+		fields.put("order", getSortOrder(c));
 		
 		List<Map<String,Object>> children = getSearchTreeChildren(c);
 		if (children.size() > 0) {
@@ -133,17 +126,46 @@ public class OWLBackend {
 			//at leaf level, look for individuals
 			for (OWLIndividual i : c.getIndividuals(ontology)) {
 				if (i.isNamed()) {
+					OWLNamedIndividual ni = i.asOWLNamedIndividual();
 					Map<String, Object> fields = new HashMap<String, Object>();
-					fields.put("iri", i.asOWLNamedIndividual().getIRI().toString());
-					fields.put("label", getLabel(i.asOWLNamedIndividual()));
+					fields.put("iri", ni.getIRI().toString());
+					fields.put("label", getLabel(ni));
+					String desc = getAnnotationPropertyValue(ni, factory.getRDFSComment());
+					if (desc != null) {
+						fields.put("desc", desc);
+					}
+					fields.put("order", getSortOrder(ni));
 					fields.put("leaf", true);
 					ret.add(fields);
 				}
 			}
 		}
 		
+		sort(ret);
+		
 		return ret;
 		
+	}
+	
+	private void sort(List<Map<String, Object>> toSort) {
+		Collections.sort(toSort, new Comparator<Map<String,Object>>() {
+
+			@Override
+			public int compare(Map<String, Object> left, Map<String, Object> right) {
+				int lefti = 0;
+				int righti = 0;
+				
+				if (left.containsKey("order")) {
+					lefti = (int) left.get("order");
+				}
+				if (right.containsKey("order")) {
+					righti = (int) right.get("order");
+				}
+				
+				return lefti - righti;
+			}
+			
+		});
 	}
 	
 	public List<OWLClass> getChildren(OWLClass c) {
@@ -162,6 +184,14 @@ public class OWLBackend {
 			val = e.getIRI().getFragment();
 		}
 		return val;
+	}
+	
+	public int getSortOrder(OWLEntity e) {
+		String val = getAnnotationPropertyValue(e, annUISearchTreeOrder);
+		if (val != null) {
+			return Integer.valueOf(val);
+		}
+		return 0;
 	}
 	
 	public String getAnnotationPropertyValue(OWLEntity e, OWLAnnotationProperty prop) {
