@@ -1,0 +1,133 @@
+@(title: String = "front")
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" href="@routes.Assets.at("javascripts/jqwidgets/styles/jqx.base.css")" type="text/css" />
+    
+    <!--
+    <style>
+		#header {
+			background-color:#787878;
+			color:white;
+			text-align:center;
+			padding:5px;
+		}
+		#nav {
+			margin-top:5px;
+			line-height:30px;
+			background-color:#eeeeee;
+			height:550px;
+			width:300px;
+			float:left;
+			padding:5px;
+			overflow:scroll;
+		}
+		#section1 {
+			margin-top:5px;
+			background-color:#EFEFEF;
+			width:1000px;
+			height:530px;
+			float:right;
+			padding:10px;
+		}
+	</style>
+	-->
+	
+	<style type="text/css">
+        html, body
+        {
+            height: 100%;
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+            overflow: hidden;
+        }
+    </style>
+    
+    
+    
+    
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/scripts/jquery-1.11.1.min.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/jqwidgets/jqxcore.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/jqwidgets/jqxdockpanel.js")"></script>
+	<script type="text/javascript" src="@routes.Assets.at("javascripts/jqwidgets/jqxbuttons.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/jqwidgets/jqxscrollbar.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/jqwidgets/jqxdatatable.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/jqwidgets/jqxtreegrid.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/jqwidgets/jqxdata.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/jqwidgets/jqxcheckbox.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/jqwidgets/jqxlistbox.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/jqwidgets/jqxsplitter.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/jqwidgets/jqxtooltip.js")"></script>
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // Create jqxDockPanel
+            //$("#jqxDockPanel").jqxDockPanel({ width: document.body.clientWidth, height: document.body.clientHeight});
+			     
+            var source =
+             {
+                 dataType: "json",
+                 dataFields: [
+                      { name: "label", type: "string" },
+                      { name: "iri", type: "string" },
+                      { name: "leaf", type: "bool" },
+                      { name: "children", type: "array" }
+                 ],                 
+                 hierarchy:
+                    {
+                        root: "children"
+                    },
+                 id: "iri",
+                 url: "/owl/searchtree"
+             };
+
+            var dataAdapter = new $.jqx.dataAdapter(source, {
+                loadComplete: function () {
+
+                }
+            });
+            
+            // create jqxTreeGrid.
+            $("#TreeGrid").jqxTreeGrid(
+            {
+                source: dataAdapter,
+                altRows: false,
+                width: 300,
+                checkboxes: function (rowKey, dataRow) {
+				    var leaf = dataRow.leaf;
+				    return leaf;	
+				},
+                ready: function () {
+                    //$("#first").jqxTreeGrid('expandRow', '1');
+                    //$("#first").jqxTreeGrid('expandRow', '2');
+                },
+                columns: [
+                  { text: "Label", align: "center", dataField: "label", width: 300 }                
+                ]      
+            });
+            // Apply custom layout depending on the user's choice.
+        });
+    </script>
+</head>
+<body class='default'>
+
+ <div id="header">
+		<h1>Earth System Modeling Infrastructure Explorer</h1>
+	</div>
+	<div id="nav">
+		<div id="TreeGrid">
+		</div>
+	</div>
+	<div id="section1">
+		<center><h1>Results<h1></center>
+		<table>
+			
+		</table>
+	</div>
+ 
+ 
+</body>
+</html>
