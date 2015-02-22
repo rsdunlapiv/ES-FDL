@@ -15,5 +15,7 @@ GET     /properties/:name           controllers.Application.getProperties(name: 
 
 GET		/owl/searchtree				controllers.OWLBackendController.getSearchTree()
 
+POST    /getdummydata				controllers.Application.getDummyData()
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

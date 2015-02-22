@@ -1,7 +1,13 @@
 package controllers;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+
 import models.Modellinginfrastructure;
 import models.PropertiesAndValues;
+import models.CheckedValuesDescription;
+
 import play.data.Form;
 import play.libs.Json;
 import play.mvc.Controller;
@@ -11,6 +17,7 @@ import views.html.index;
 import views.html.submit;
 import views.html.front;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 public class Application extends Controller {
@@ -21,7 +28,7 @@ public class Application extends Controller {
 	public static Result index() {
 		return ok(index.render(modellingInfraForm));
 	}
-	
+
 	public static Result front() {
 		return ok(front.render(""));
 	}
@@ -54,5 +61,37 @@ public class Application extends Controller {
 		propandvals.datapropandval = axiomretriever.getDatapropandVal();
 		propandvals.objpropandval = axiomretriever.getObjpropandVal();
 		return ok(Json.toJson(propandvals));
+	}
+
+	public static Result getDummyData() {
+		HashMap<String, ArrayList<CheckedValuesDescription>> checked_value_desc = new HashMap<String, ArrayList<CheckedValuesDescription>>();
+		JsonNode json = request().body().asJson();
+		Iterator<String> itr = json.fieldNames();
+		while (itr.hasNext()) {
+			String temp = itr.next();
+			ArrayList<CheckedValuesDescription> dummy = new ArrayList<CheckedValuesDescription>();
+			JsonNode vals = json.get(temp);
+			Iterator<JsonNode> values = vals.elements();
+			while (values.hasNext()) {
+				JsonNode value = values.next();
+				CheckedValuesDescription val = new CheckedValuesDescription();
+				val.IRI = value.get("iri").toString();
+				val.label = val.IRI.split("#")[val.IRI.split("#").length - 1];// need
+				// to
+				// call
+				// function
+				// which
+				// gives
+				// label
+				// value
+				val.label = val.label.substring(0, val.label.length() - 1);
+				val.description = "dummy description"; // need to call function
+														// which gives
+				// description value
+				dummy.add(val);
+			}
+			checked_value_desc.put(temp, dummy);
+		}
+		return ok(Json.toJson(checked_value_desc));
 	}
 }

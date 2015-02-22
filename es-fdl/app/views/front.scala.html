@@ -3,52 +3,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <link rel="stylesheet" href="@routes.Assets.at("javascripts/jqwidgets/styles/jqx.base.css")" type="text/css" />
-    
-    <style>
-		#header {
-			background-color:#787878;
-			color:white;
-			text-align:center;
-			padding:5px;
-		}
-		#nav {
-			margin-top:5px;
-			line-height:30px;
-			background-color:#eeeeee;
-			height:550px;
-			width:550px;
-			float:left;
-			padding:5px;
-			overflow:scroll;
-		}
-		#section1 {
-			margin-top:5px;
-			margin-left:5px;
-			background-color:#EFEFEF;
-			width:1000px;
-			height:530px;
-			float:left;
-			padding:10px;
-		}
-	</style>
-	
-	<!--
-	<style type="text/css">
-        html, body
-        {
-            height: 100%;
-            width: 100%;
-            margin: 0px;
-            padding: 0px;
-            overflow: hidden;
-        }
-    </style>
-    -->
-    
-    
-    
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/main.css")" type="text/css" />
     <script type="text/javascript" src="@routes.Assets.at("javascripts/scripts/jquery-1.11.1.min.js")"></script>
     <script type="text/javascript" src="@routes.Assets.at("javascripts/jqwidgets/jqxcore.js")"></script>
     <script type="text/javascript" src="@routes.Assets.at("javascripts/jqwidgets/jqxdockpanel.js")"></script>
@@ -61,64 +17,16 @@
     <script type="text/javascript" src="@routes.Assets.at("javascripts/jqwidgets/jqxlistbox.js")"></script>
     <script type="text/javascript" src="@routes.Assets.at("javascripts/jqwidgets/jqxsplitter.js")"></script>
     <script type="text/javascript" src="@routes.Assets.at("javascripts/jqwidgets/jqxtooltip.js")"></script>
-    
-    <script type="text/javascript">
-        $(document).ready(function () {
-            // Create jqxDockPanel
-            //$("#jqxDockPanel").jqxDockPanel({ width: document.body.clientWidth, height: document.body.clientHeight});
-			     
-            var source =
-             {
-                 dataType: "json",
-                 dataFields: [
-                      { name: "label", type: "string" },
-                      { name: "iri", type: "string" },
-                      { name: "leaf", type: "bool" },
-                      { name: "desc", type: "string" }, 
-                      { name: "children", type: "array" }
-                 ],                 
-                 hierarchy:
-                    {
-                        root: "children"
-                    },
-                 id: "iri",
-                 url: "/owl/searchtree"
-             };
-
-            var dataAdapter = new $.jqx.dataAdapter(source, {
-                loadComplete: function () {
-
-                }
-            });
-            
-            // create jqxTreeGrid.
-            $("#TreeGrid").jqxTreeGrid(
-            {
-                source: dataAdapter,
-                altRows: false,
-                width: 500,
-                selectionMode: 'custom',
-                checkboxes: function (rowKey, dataRow) {
-				    var leaf = dataRow.leaf;
-				    return leaf;	
-				},
-                ready: function () {
-                    //$("#first").jqxTreeGrid('expandRow', '1');
-                    //$("#first").jqxTreeGrid('expandRow', '2');
-                },
-                columns: [
-                  { text: "Label", align: "left", dataField: "label", width: 300 },
-                  { text: "Description", align: "left", dataField: "desc", width: 200}             
-                ]      
-            });
-            // Apply custom layout depending on the user's choice.
-        });
-    </script>
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/main.js")"></script>
 </head>
 <body class='default'>
-
- <div id="header">
-		<h1>Earth System Modeling Infrastructure Explorer</h1>
+	<div id="header">
+		<center><h1>Earth System Modeling Infrastructure Explorer</h1></center>
+		<ul id="customlist">
+			<li><a href="#">Search</a></li>
+			<li><a href="#">Compare</a></li>			
+			<li><a href="#">Connect</a></li>
+		</ul>
 	</div>
 	<div id="nav">
 		<div id="TreeGrid">
@@ -126,11 +34,15 @@
 	</div>
 	<div id="section1">
 		<center><h1>Results<h1></center>
+		<form action="javascript:getValues()">
 		<table>
-			
+			<tr>
+				<td><input type="submit" name="modellingframework"></td>
+			</tr>
 		</table>
+		</form>
 	</div>
- 
- 
+	<div id="footer">
+	</div>
 </body>
 </html>
