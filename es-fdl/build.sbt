@@ -12,3 +12,8 @@ libraryDependencies ++= Seq(
   cache,
   javaWs
 )
+
+libraryDependencies += "net.sourceforge.owlapi" % "owlapi-distribution" % "3.4.10"
+
+libraryDependencies += "com.hermit-reasoner" % "org.semanticweb.hermit" % "1.3.8.4"
+

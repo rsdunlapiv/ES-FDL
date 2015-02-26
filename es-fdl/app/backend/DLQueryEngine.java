@@ -3,6 +3,7 @@ package backend;
 import java.util.Collections;
 import java.util.Set;
 
+import org.semanticweb.owlapi.expression.ParserException;
 import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLClassExpression;
 import org.semanticweb.owlapi.model.OWLNamedIndividual;
@@ -21,7 +22,7 @@ public class DLQueryEngine {
 		parser = new DLQueryParser(reasoner.getRootOntology(), shortFormProvider);
 	}
 
-	public Set<OWLClass> getSuperClasses(String classExpressionString, boolean direct) {
+	public Set<OWLClass> getSuperClasses(String classExpressionString, boolean direct) throws ParserException {
 		if (classExpressionString.trim().length() == 0) {
 			return Collections.emptySet();
 		}
@@ -32,7 +33,7 @@ public class DLQueryEngine {
 		return superClasses.getFlattened();
 	}
 
-	public Set<OWLClass> getEquivalentClasses(String classExpressionString) {
+	public Set<OWLClass> getEquivalentClasses(String classExpressionString) throws ParserException {
 		if (classExpressionString.trim().length() == 0) {
 			return Collections.emptySet();
 		}
@@ -48,7 +49,7 @@ public class DLQueryEngine {
 		return result;
 	}
 
-	public Set<OWLClass> getSubClasses(String classExpressionString, boolean direct) {
+	public Set<OWLClass> getSubClasses(String classExpressionString, boolean direct) throws ParserException {
 		if (classExpressionString.trim().length() == 0) {
 			return Collections.emptySet();
 		}
@@ -59,7 +60,7 @@ public class DLQueryEngine {
 	}
 
 	public Set<OWLNamedIndividual> getInstances(String classExpressionString,
-			boolean direct) {
+			boolean direct) throws ParserException {
 		if (classExpressionString.trim().length() == 0) {
 			return Collections.emptySet();
 		}

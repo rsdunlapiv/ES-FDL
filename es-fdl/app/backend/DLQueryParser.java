@@ -4,6 +4,7 @@ import java.util.Set;
 
 import org.coode.owlapi.manchesterowlsyntax.ManchesterOWLSyntaxEditorParser;
 import org.semanticweb.owlapi.expression.OWLEntityChecker;
+import org.semanticweb.owlapi.expression.ParserException;
 import org.semanticweb.owlapi.expression.ShortFormEntityChecker;
 import org.semanticweb.owlapi.model.OWLClassExpression;
 import org.semanticweb.owlapi.model.OWLDataFactory;
@@ -29,7 +30,7 @@ public class DLQueryParser {
 				importsClosure, shortFormProvider);
 	}
 
-	public OWLClassExpression parseClassExpression(String classExpressionString) {
+	public OWLClassExpression parseClassExpression(String classExpressionString) throws ParserException {
 		OWLDataFactory dataFactory = rootOntology.getOWLOntologyManager()
 				.getOWLDataFactory();
 		ManchesterOWLSyntaxEditorParser parser = new ManchesterOWLSyntaxEditorParser(

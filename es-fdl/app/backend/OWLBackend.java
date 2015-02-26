@@ -10,7 +10,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.semanticweb.HermiT.Reasoner;
 import org.semanticweb.owlapi.apibinding.OWLManager;
+import org.semanticweb.owlapi.expression.ParserException;
 import org.semanticweb.owlapi.model.IRI;
 import org.semanticweb.owlapi.model.OWLAnnotation;
 import org.semanticweb.owlapi.model.OWLAnnotationProperty;
@@ -96,17 +98,21 @@ public class OWLBackend {
 		//OWLAxiom axiom = factory.getOWLEquivalentClassesAxiom(classQuery, expr);
 		//manager.addAxiom(owlOntology, axiom);
 		
-		//OWLReasoner reasoner = null; //new Reasoner.ReasonerFactory().createReasoner(ontology);
-		//ShortFormProvider shortFormProvider = new SimpleShortFormProvider();
+		OWLReasoner reasoner = new Reasoner.ReasonerFactory().createReasoner(ontology);
+		ShortFormProvider shortFormProvider = new SimpleShortFormProvider();
 		
-		//DLQueryEngine engine = new DLQueryEngine(reasoner, 	shortFormProvider);
+		DLQueryEngine engine = new DLQueryEngine(reasoner, 	shortFormProvider);
 		
-		//String query = "ModelingInfrastructure";
-		//Set<OWLNamedIndividual> instances = engine.getInstances(query, true);
-		//for (OWLNamedIndividual i : instances) {
-		//	ret.add(getLabel(i));
-		//}
-		
+		String query = "ModelingInfrastructure";
+		try {
+			Set<OWLNamedIndividual> instances = engine.getInstances(query, true);
+			for (OWLNamedIndividual i : instances) {
+				ret.add(getLabel(i));
+			}
+		}
+		catch (ParserException e) {
+			
+		}
 		return ret;
 	}
 	
