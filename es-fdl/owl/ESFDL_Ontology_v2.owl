@@ -11,10 +11,10 @@
 
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.earthsystemcog.org/projects/es-fdl/ontology"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.earthsystemcog.org/projects/es-fdl/ontology"
      versionIRI="http://www.earthsystemcog.org/projects/es-fdl/ontology/0.2">
     <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
@@ -101,34 +101,52 @@
         <Class IRI="#StepSize"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#assumesCouplingFrequency"/>
+        <ObjectProperty IRI="#allowsGridCoordinateSystem"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#assumesFieldConnection"/>
+        <ObjectProperty IRI="#allowsGridNesting"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#assumesGridCoordinateSystem"/>
+        <ObjectProperty IRI="#allowsGridParallelDecomposition"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#assumesGridNesting"/>
+        <ObjectProperty IRI="#allowsGridProperty"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#assumesGridParallelDecomposition"/>
+        <ObjectProperty IRI="#allowsGridTopologicalStructure"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#assumesGridTopologicalStructure"/>
+        <ObjectProperty IRI="#allowsModelProperty"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#assumesProperty"/>
+        <ObjectProperty IRI="#defaultCouplingFrequency"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#assumesSimulationMembership"/>
+        <ObjectProperty IRI="#defaultFieldConnection"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#assumesStepScheme"/>
+        <ObjectProperty IRI="#defaultGridCoordinateSystem"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#assumesStepSize"/>
+        <ObjectProperty IRI="#defaultGridNesting"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#defaultGridParallelDecomposition"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#defaultGridTopologicalStructure"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#defaultProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#defaultSimulationMembership"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#defaultStepScheme"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#defaultStepSize"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#extensibleMediation"/>
@@ -143,28 +161,10 @@
         <ObjectProperty IRI="#hasFieldConnection"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasGridCoordinateSystem"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasGridNesting"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasGridParallelDecomposition"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasGridProperty"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasGridTopologicalStructure"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#hasIterationProperty"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasMediation"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasModelProperty"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasSimulationMembership"/>
@@ -177,6 +177,18 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hookMediation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ignoresGridCoordinateSystem"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ignoresGridNesting"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ignoresGridParallelDecomposition"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ignoresGridTopologicalStructure"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#optionalCouplingFrequency"/>
@@ -392,6 +404,9 @@
         <AnnotationProperty IRI="#XMLMapping"/>
     </Declaration>
     <Declaration>
+        <AnnotationProperty IRI="#relatedProperty"/>
+    </Declaration>
+    <Declaration>
         <AnnotationProperty IRI="#uiSearchTreeExclude"/>
     </Declaration>
     <Declaration>
@@ -413,12 +428,13 @@
         <Class IRI="#Query1"/>
         <ObjectIntersectionOf>
             <Class IRI="#ModelingInfrastructure"/>
-            <ObjectComplementOf>
-                <ObjectHasValue>
-                    <ObjectProperty IRI="#optionalGridNesting"/>
-                    <NamedIndividual IRI="#GridNesting_GridNesting"/>
-                </ObjectHasValue>
-            </ObjectComplementOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#allowsGridCoordinateSystem"/>
+                <ObjectOneOf>
+                    <NamedIndividual IRI="#GridCoordinateSystem_Cartesian"/>
+                    <NamedIndividual IRI="#GridCoordinateSystem_Spherical"/>
+                </ObjectOneOf>
+            </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <SubClassOf>
@@ -720,60 +736,90 @@
         <Class IRI="#StepSize"/>
         <NamedIndividual IRI="#StepSize_LocalAdaptive"/>
     </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#optionalGridCoordinateSystem"/>
+        <NamedIndividual IRI="#ESMF"/>
+        <NamedIndividual IRI="#GridCoordinateSystem_Spherical"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#optionalGridCoordinateSystem"/>
+        <NamedIndividual IRI="#ESMF"/>
+        <NamedIndividual IRI="#GridCoordinateSystem_Cartesian"/>
+    </ObjectPropertyAssertion>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#assumesCouplingFrequency"/>
-        <ObjectProperty IRI="#hasCouplingFrequency"/>
+        <ObjectProperty IRI="#allowsGridCoordinateSystem"/>
+        <ObjectProperty IRI="#allowsGridProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#assumesFieldConnection"/>
-        <ObjectProperty IRI="#hasFieldConnection"/>
+        <ObjectProperty IRI="#allowsGridNesting"/>
+        <ObjectProperty IRI="#allowsGridProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#assumesGridCoordinateSystem"/>
-        <ObjectProperty IRI="#assumesProperty"/>
+        <ObjectProperty IRI="#allowsGridParallelDecomposition"/>
+        <ObjectProperty IRI="#allowsGridProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#assumesGridCoordinateSystem"/>
-        <ObjectProperty IRI="#hasGridCoordinateSystem"/>
+        <ObjectProperty IRI="#allowsGridProperty"/>
+        <ObjectProperty IRI="#allowsModelProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#assumesGridNesting"/>
-        <ObjectProperty IRI="#assumesProperty"/>
+        <ObjectProperty IRI="#allowsGridTopologicalStructure"/>
+        <ObjectProperty IRI="#allowsGridProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#assumesGridNesting"/>
-        <ObjectProperty IRI="#hasGridNesting"/>
+        <ObjectProperty IRI="#defaultCouplingFrequency"/>
+        <ObjectProperty IRI="#requiresCouplingFrequency"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#assumesGridParallelDecomposition"/>
-        <ObjectProperty IRI="#hasGridParallelDecomposition"/>
+        <ObjectProperty IRI="#defaultFieldConnection"/>
+        <ObjectProperty IRI="#requiresFieldConnection"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#assumesGridTopologicalStructure"/>
-        <ObjectProperty IRI="#assumesProperty"/>
+        <ObjectProperty IRI="#defaultGridCoordinateSystem"/>
+        <ObjectProperty IRI="#allowsGridCoordinateSystem"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#assumesGridTopologicalStructure"/>
-        <ObjectProperty IRI="#hasGridTopologicalStructure"/>
+        <ObjectProperty IRI="#defaultGridCoordinateSystem"/>
+        <ObjectProperty IRI="#defaultProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#assumesSimulationMembership"/>
-        <ObjectProperty IRI="#hasSimulationMembership"/>
+        <ObjectProperty IRI="#defaultGridNesting"/>
+        <ObjectProperty IRI="#allowsGridNesting"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#assumesStepScheme"/>
-        <ObjectProperty IRI="#assumesProperty"/>
+        <ObjectProperty IRI="#defaultGridNesting"/>
+        <ObjectProperty IRI="#defaultProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#assumesStepScheme"/>
+        <ObjectProperty IRI="#defaultGridParallelDecomposition"/>
+        <ObjectProperty IRI="#allowsGridParallelDecomposition"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#defaultGridTopologicalStructure"/>
+        <ObjectProperty IRI="#allowsGridTopologicalStructure"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#defaultGridTopologicalStructure"/>
+        <ObjectProperty IRI="#defaultProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#defaultSimulationMembership"/>
+        <ObjectProperty IRI="#requiresSimulationMembership"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#defaultStepScheme"/>
+        <ObjectProperty IRI="#defaultProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#defaultStepScheme"/>
         <ObjectProperty IRI="#hasStepScheme"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#assumesStepSize"/>
-        <ObjectProperty IRI="#assumesProperty"/>
+        <ObjectProperty IRI="#defaultStepSize"/>
+        <ObjectProperty IRI="#defaultProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#assumesStepSize"/>
+        <ObjectProperty IRI="#defaultStepSize"/>
         <ObjectProperty IRI="#hasStepSize"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
@@ -789,28 +835,8 @@
         <ObjectProperty IRI="#hasCompositionProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasGridCoordinateSystem"/>
-        <ObjectProperty IRI="#hasGridProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasGridNesting"/>
-        <ObjectProperty IRI="#hasGridProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasGridParallelDecomposition"/>
-        <ObjectProperty IRI="#hasGridProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasGridProperty"/>
-        <ObjectProperty IRI="#hasModelProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasGridTopologicalStructure"/>
-        <ObjectProperty IRI="#hasGridProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasIterationProperty"/>
-        <ObjectProperty IRI="#hasModelProperty"/>
+        <ObjectProperty IRI="#allowsModelProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasMediation"/>
@@ -833,6 +859,22 @@
         <ObjectProperty IRI="#hasMediation"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#ignoresGridCoordinateSystem"/>
+        <ObjectProperty IRI="#allowsGridCoordinateSystem"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#ignoresGridNesting"/>
+        <ObjectProperty IRI="#allowsGridNesting"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#ignoresGridParallelDecomposition"/>
+        <ObjectProperty IRI="#allowsGridParallelDecomposition"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#ignoresGridTopologicalStructure"/>
+        <ObjectProperty IRI="#allowsGridTopologicalStructure"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#optionalCouplingFrequency"/>
         <ObjectProperty IRI="#hasCouplingFrequency"/>
     </SubObjectPropertyOf>
@@ -842,7 +884,7 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#optionalGridCoordinateSystem"/>
-        <ObjectProperty IRI="#hasGridCoordinateSystem"/>
+        <ObjectProperty IRI="#allowsGridCoordinateSystem"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#optionalGridCoordinateSystem"/>
@@ -850,7 +892,7 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#optionalGridNesting"/>
-        <ObjectProperty IRI="#hasGridNesting"/>
+        <ObjectProperty IRI="#allowsGridNesting"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#optionalGridNesting"/>
@@ -858,11 +900,11 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#optionalGridParallelDecomposition"/>
-        <ObjectProperty IRI="#hasGridParallelDecomposition"/>
+        <ObjectProperty IRI="#allowsGridParallelDecomposition"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#optionalGridTopologicalStructure"/>
-        <ObjectProperty IRI="#hasGridTopologicalStructure"/>
+        <ObjectProperty IRI="#allowsGridTopologicalStructure"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#optionalGridTopologicalStructure"/>
@@ -894,15 +936,15 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#requiresCouplingFrequency"/>
-        <ObjectProperty IRI="#assumesCouplingFrequency"/>
+        <ObjectProperty IRI="#hasCouplingFrequency"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#requiresFieldConnection"/>
-        <ObjectProperty IRI="#assumesFieldConnection"/>
+        <ObjectProperty IRI="#hasFieldConnection"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#requiresGridCoordinateSystem"/>
-        <ObjectProperty IRI="#assumesGridCoordinateSystem"/>
+        <ObjectProperty IRI="#defaultGridCoordinateSystem"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#requiresGridCoordinateSystem"/>
@@ -910,7 +952,7 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#requiresGridNesting"/>
-        <ObjectProperty IRI="#assumesGridNesting"/>
+        <ObjectProperty IRI="#defaultGridNesting"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#requiresGridNesting"/>
@@ -918,11 +960,11 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#requiresGridParallelDecomposition"/>
-        <ObjectProperty IRI="#assumesGridParallelDecomposition"/>
+        <ObjectProperty IRI="#defaultGridParallelDecomposition"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#requiresGridTopologicalStructure"/>
-        <ObjectProperty IRI="#assumesGridTopologicalStructure"/>
+        <ObjectProperty IRI="#defaultGridTopologicalStructure"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#requiresGridTopologicalStructure"/>
@@ -930,11 +972,11 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#requiresSimulationMembership"/>
-        <ObjectProperty IRI="#assumesSimulationMembership"/>
+        <ObjectProperty IRI="#hasSimulationMembership"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#requiresStepScheme"/>
-        <ObjectProperty IRI="#assumesStepScheme"/>
+        <ObjectProperty IRI="#defaultStepScheme"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#requiresStepScheme"/>
@@ -942,41 +984,77 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#requiresStepSize"/>
-        <ObjectProperty IRI="#assumesStepSize"/>
+        <ObjectProperty IRI="#defaultStepSize"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#requiresStepSize"/>
         <ObjectProperty IRI="#requiresProperty"/>
     </SubObjectPropertyOf>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="#assumesGridCoordinateSystem"/>
+        <ObjectProperty IRI="#defaultCouplingFrequency"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="#assumesGridParallelDecomposition"/>
+        <ObjectProperty IRI="#defaultFieldConnection"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="#assumesGridTopologicalStructure"/>
+        <ObjectProperty IRI="#defaultGridCoordinateSystem"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="#assumesStepScheme"/>
+        <ObjectProperty IRI="#defaultGridNesting"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="#assumesStepSize"/>
+        <ObjectProperty IRI="#defaultGridParallelDecomposition"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="#requiresCouplingFrequency"/>
+        <ObjectProperty IRI="#defaultGridTopologicalStructure"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="#requiresFieldConnection"/>
+        <ObjectProperty IRI="#defaultSimulationMembership"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#requiresGridCoordinateSystem"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#requiresGridNesting"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="#requiresSimulationMembership"/>
+        <ObjectProperty IRI="#requiresGridParallelDecomposition"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#requiresGridTopologicalStructure"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#requiresStepScheme"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#requiresStepSize"/>
     </FunctionalObjectProperty>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#assumesProperty"/>
+        <ObjectProperty IRI="#allowsGridCoordinateSystem"/>
+        <Class IRI="#ModelingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#allowsGridNesting"/>
+        <Class IRI="#ModelingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#allowsGridParallelDecomposition"/>
+        <Class IRI="#ModelingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#allowsGridProperty"/>
+        <Class IRI="#ModelingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#allowsGridTopologicalStructure"/>
+        <Class IRI="#ModelingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#allowsModelProperty"/>
+        <Class IRI="#ModelingInfrastructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#defaultProperty"/>
         <Class IRI="#ModelingInfrastructure"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -992,35 +1070,11 @@
         <Class IRI="#ModelingInfrastructure"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasGridCoordinateSystem"/>
-        <Class IRI="#ModelingInfrastructure"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasGridNesting"/>
-        <Class IRI="#ModelingInfrastructure"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasGridParallelDecomposition"/>
-        <Class IRI="#ModelingInfrastructure"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasGridProperty"/>
-        <Class IRI="#ModelingInfrastructure"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasGridTopologicalStructure"/>
-        <Class IRI="#ModelingInfrastructure"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasIterationProperty"/>
         <Class IRI="#ModelingInfrastructure"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasMediation"/>
-        <Class IRI="#ModelingInfrastructure"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasModelProperty"/>
         <Class IRI="#ModelingInfrastructure"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -1040,7 +1094,31 @@
         <Class IRI="#ModelingInfrastructure"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#assumesProperty"/>
+        <ObjectProperty IRI="#allowsGridCoordinateSystem"/>
+        <Class IRI="#GridCoordinateSystem"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#allowsGridNesting"/>
+        <Class IRI="#GridNesting"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#allowsGridParallelDecomposition"/>
+        <Class IRI="#GridParallelDecomposition"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#allowsGridProperty"/>
+        <Class IRI="#GridProperty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#allowsGridTopologicalStructure"/>
+        <Class IRI="#GridTopologicalStructure"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#allowsModelProperty"/>
+        <Class IRI="#ModelProperty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#defaultProperty"/>
         <Class IRI="#ModelProperty"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -1056,36 +1134,12 @@
         <Class IRI="#FieldConnection"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasGridCoordinateSystem"/>
-        <Class IRI="#GridCoordinateSystem"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasGridNesting"/>
-        <Class IRI="#GridNesting"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasGridParallelDecomposition"/>
-        <Class IRI="#GridParallelDecomposition"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasGridProperty"/>
-        <Class IRI="#GridProperty"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasGridTopologicalStructure"/>
-        <Class IRI="#GridTopologicalStructure"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasIterationProperty"/>
         <Class IRI="#IterationProperty"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasMediation"/>
         <Class IRI="#Mediation"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasModelProperty"/>
-        <Class IRI="#ModelProperty"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasSimulationMembership"/>
@@ -1104,12 +1158,44 @@
         <Class IRI="#ModelProperty"/>
     </ObjectPropertyRange>
     <DisjointObjectProperties>
-        <ObjectProperty IRI="#optionalCouplingFrequency"/>
-        <ObjectProperty IRI="#requiresCouplingFrequency"/>
+        <ObjectProperty IRI="#defaultFieldConnection"/>
+        <ObjectProperty IRI="#optionalFieldConnection"/>
     </DisjointObjectProperties>
     <DisjointObjectProperties>
-        <ObjectProperty IRI="#optionalFieldConnection"/>
-        <ObjectProperty IRI="#requiresFieldConnection"/>
+        <ObjectProperty IRI="#defaultGridCoordinateSystem"/>
+        <ObjectProperty IRI="#ignoresGridCoordinateSystem"/>
+        <ObjectProperty IRI="#optionalGridCoordinateSystem"/>
+    </DisjointObjectProperties>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#defaultGridNesting"/>
+        <ObjectProperty IRI="#ignoresGridNesting"/>
+        <ObjectProperty IRI="#optionalGridNesting"/>
+    </DisjointObjectProperties>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#defaultGridParallelDecomposition"/>
+        <ObjectProperty IRI="#ignoresGridParallelDecomposition"/>
+        <ObjectProperty IRI="#optionalGridParallelDecomposition"/>
+    </DisjointObjectProperties>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#defaultGridTopologicalStructure"/>
+        <ObjectProperty IRI="#ignoresGridTopologicalStructure"/>
+        <ObjectProperty IRI="#optionalGridTopologicalStructure"/>
+    </DisjointObjectProperties>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#defaultGridTopologicalStructure"/>
+        <ObjectProperty IRI="#optionalGridTopologicalStructure"/>
+    </DisjointObjectProperties>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#defaultSimulationMembership"/>
+        <ObjectProperty IRI="#optionalSimulationMembership"/>
+    </DisjointObjectProperties>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#defaultStepScheme"/>
+        <ObjectProperty IRI="#optionalStepScheme"/>
+    </DisjointObjectProperties>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#defaultStepSize"/>
+        <ObjectProperty IRI="#optionalStepSize"/>
     </DisjointObjectProperties>
     <DisjointObjectProperties>
         <ObjectProperty IRI="#optionalGridCoordinateSystem"/>
@@ -1126,18 +1212,6 @@
     <DisjointObjectProperties>
         <ObjectProperty IRI="#optionalGridTopologicalStructure"/>
         <ObjectProperty IRI="#requiresGridTopologicalStructure"/>
-    </DisjointObjectProperties>
-    <DisjointObjectProperties>
-        <ObjectProperty IRI="#optionalSimulationMembership"/>
-        <ObjectProperty IRI="#requiresSimulationMembership"/>
-    </DisjointObjectProperties>
-    <DisjointObjectProperties>
-        <ObjectProperty IRI="#optionalStepScheme"/>
-        <ObjectProperty IRI="#requiresStepScheme"/>
-    </DisjointObjectProperties>
-    <DisjointObjectProperties>
-        <ObjectProperty IRI="#optionalStepSize"/>
-        <ObjectProperty IRI="#requiresStepSize"/>
     </DisjointObjectProperties>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1188,6 +1262,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#CouplingFrequency_Fixed</IRI>
         <Literal datatypeIRI="&xsd;string">Fixed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ESMF</IRI>
+        <Literal datatypeIRI="&xsd;string">ESMF</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

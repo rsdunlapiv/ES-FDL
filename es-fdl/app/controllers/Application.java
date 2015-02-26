@@ -22,6 +22,9 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 
 public class Application extends Controller {
 
+	/* used in various places to determine if we are in a dev environment or production */
+	public final static boolean isDebug = true;
+	
 	final static Form<Modellinginfrastructure> modellingInfraForm = Form
 			.form(Modellinginfrastructure.class);
 

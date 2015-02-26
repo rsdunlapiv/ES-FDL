@@ -80,10 +80,30 @@ function getValues(){
        		}
         }
     }
+   
+    
+    //reformat json example
+    selection_json = [
+		  {
+		    "parentiri": "http://www.earthsystemcog.org/projects/es-fdl/ontology#GridCoordinateSystem",
+		    "selected": [
+		      "http://www.earthsystemcog.org/projects/es-fdl/ontology#GridCoordinateSystem_Spherical",
+		      "http://www.earthsystemcog.org/projects/es-fdl/ontology#GridCoordinateSystem_Cartesian"
+		    ]
+		  },
+		  {
+		    "parentiri": "http://www.earthsystemcog.org/projects/es-fdl/ontology#GridDistanceMeasure",
+		    "selected": [
+		      "http://www.earthsystemcog.org/projects/es-fdl/ontology#GridDistanceMeasure_GreatCircle"
+		    ]
+		  }
+		];
+    
     selection_json = JSON.stringify(selection_json);
+    
     console.log(selection_json);
     $.ajax({
-    	url : "/getdummydata",
+    	url : "/owl/query",
     	type : 'POST',
     	dataType : 'json',
     	contentType : 'application/json',

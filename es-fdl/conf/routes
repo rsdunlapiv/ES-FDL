@@ -15,6 +15,8 @@ GET     /properties/:name           controllers.Application.getProperties(name: 
 
 GET		/owl/searchtree				controllers.OWLBackendController.getSearchTree()
 
+POST	/owl/query					controllers.OWLBackendController.query()
+
 POST    /getdummydata				controllers.Application.getDummyData()
 
 # Map static resources from the /public folder to the /assets URL path

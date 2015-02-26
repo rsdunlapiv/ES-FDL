@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -23,8 +24,14 @@ import org.semanticweb.owlapi.model.OWLNamedIndividual;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.model.PrefixManager;
+import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.util.DefaultPrefixManager;
+import org.semanticweb.owlapi.util.ShortFormProvider;
+import org.semanticweb.owlapi.util.SimpleShortFormProvider;
 
+import com.fasterxml.jackson.databind.JsonNode;
+
+import controllers.Application;
 import play.Logger;
 
 public class OWLBackend {
@@ -65,10 +72,50 @@ public class OWLBackend {
 		this.pm = new DefaultPrefixManager(ontologyIRI.toString());
 	}
 	
+	public List<String> query(JsonNode json) {
+		
+		List<String> ret = new ArrayList<String>();
+		
+		Iterator<JsonNode> iter = json.elements();
+		while (iter.hasNext()) {
+			JsonNode jsn = iter.next();
+			String parentiri = jsn.get("parentiri").asText();
+			Logger.info("parentiri=" + parentiri);
+			
+			Iterator<JsonNode> selected = jsn.get("selected").elements();
+			while (selected.hasNext()) {
+				JsonNode jsns = selected.next();
+				String selectediri = jsns.asText();
+				Logger.info("selected=" + selectediri);
+			}
+		}
+		
+		//String query = "ModelingInfrastructure and (hasBasicCapabilities some ({AngleConversion}))";
+		//OWLClassExpression expr = parseManchester(manager, owlOntology, query);
+		//System.out.println("Parsed expression: " + expr);
+		//OWLAxiom axiom = factory.getOWLEquivalentClassesAxiom(classQuery, expr);
+		//manager.addAxiom(owlOntology, axiom);
+		
+		//OWLReasoner reasoner = null; //new Reasoner.ReasonerFactory().createReasoner(ontology);
+		//ShortFormProvider shortFormProvider = new SimpleShortFormProvider();
+		
+		//DLQueryEngine engine = new DLQueryEngine(reasoner, 	shortFormProvider);
+		
+		//String query = "ModelingInfrastructure";
+		//Set<OWLNamedIndividual> instances = engine.getInstances(query, true);
+		//for (OWLNamedIndividual i : instances) {
+		//	ret.add(getLabel(i));
+		//}
+		
+		return ret;
+	}
 	
 	public List<Map<String,Object>> getSearchTree() {
 	
-		loadOntology();  //reloading every time while debugging, comment out before deploying
+		if (Application.isDebug) {
+			//reload every time while debugging and change ontology frequently
+			loadOntology();
+		}
 		
 		List<Map<String,Object>> ret = new ArrayList<Map<String,Object>>();
 		
@@ -205,11 +252,6 @@ public class OWLBackend {
 		return null;
 	}
 	
-	public static class TreeNode {
-		OWLClass clazz;
-		OWLIndividual individual;
-		String label;
-	}
 	
 	
 }
