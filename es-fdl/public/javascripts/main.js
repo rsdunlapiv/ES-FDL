@@ -94,7 +94,7 @@ function getValues(){
     }
     
     selection_json = JSON.stringify(selection_json);
-    
+    console.log(selection_json);
     $.ajax({
     	url : "/owl/query",
     	type : 'POST',
@@ -103,22 +103,27 @@ function getValues(){
     	data : selection_json
     	}).done(function(data){
     		console.log(data);
-    		var table_to_be_inserted = '<table id = "hook_added_table">';
-    		for(var key in data){
-    			//console.log(key + " -> ");
-    			table_to_be_inserted = table_to_be_inserted + '<tr><td><b>' + key + '</b></td></tr>';
-    			for(var val in data[key]){
-    				table_to_be_inserted = table_to_be_inserted + '<tr><td>' + data[key][val]['label'] + '</td><td>' + data[key][val]['description'] + '</td></tr>';
-    				//console.log(data[key][val]['label']);
-    				//console.log(data[key][val]['description']);
-    			}
-    		   	table_to_be_inserted = table_to_be_inserted + '<tr></tr>';
-    		}
-    	table_to_be_inserted = table_to_be_inserted + '</table>';
-    	var previously_added_table = $('#hook_added_table');
-    	if(previously_added_table.length != 0){
-    		previously_added_table.remove();
-    	}
-    	$('#section1').append(table_to_be_inserted);
+			var source = 
+			{
+				localData: data,
+				dataType: "array",
+				dataFields:
+				[
+					{ name: 'label', type: 'string' },
+					{ name: 'desc', type: 'string' }					
+				]
+			};
+			var dataAdapter = new $.jqx.dataAdapter(source);
+			
+			$("#table_hook").jqxDataTable(
+			{
+				width: 600,
+				source: dataAdapter,
+				columnsResize: true,
+				columns:[
+					{text: 'Name', dataField: 'label', width: 200},
+					{text: 'Description', dataField: 'desc', width: 400}
+				]
+			});
     	});
 }
