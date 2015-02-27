@@ -70,38 +70,31 @@ function getValuesFromObject(obj){
 
 function getValues(){
     var selection = $('#TreeGrid').jqxTreeGrid('getRows');
-	var selection_json = {};
+	var selection_json = [];
+	var temp_map = {}
     for(var i=0;i<selection.length;i++){
         var rowvalue = selection[i];
         if(rowvalue['children']!= undefined){
        		var value = getValuesFromObject(rowvalue['children']);
-       		if (value.length != 0){
-       			selection_json[rowvalue['label']] = value;
+       		for(var j=0; j < value.length;j++){
+	       		if(value[j]["parentiri"] in temp_map){
+	       			temp_map[value[j]["parentiri"]].push(value[j]["iri"]);
+	       		}else{
+	       			temp_map[value[j]["parentiri"]] = [];
+	       			temp_map[value[j]["parentiri"]].push(value[j]["iri"]);       				
+	       		}
        		}
         }
+    }    
+    for(var k in temp_map){
+    	var temp_selection = {};
+    	temp_selection["parentiri"] = k;
+    	temp_selection["selected"] = temp_map[k];
+    	selection_json.push(temp_selection);
     }
-   
-    
-    //reformat json example
-    selection_json = [
-		  {
-		    "parentiri": "http://www.earthsystemcog.org/projects/es-fdl/ontology#GridCoordinateSystem",
-		    "selected": [
-		      "http://www.earthsystemcog.org/projects/es-fdl/ontology#GridCoordinateSystem_Spherical",
-		      "http://www.earthsystemcog.org/projects/es-fdl/ontology#GridCoordinateSystem_Cartesian"
-		    ]
-		  },
-		  {
-		    "parentiri": "http://www.earthsystemcog.org/projects/es-fdl/ontology#GridDistanceMeasure",
-		    "selected": [
-		      "http://www.earthsystemcog.org/projects/es-fdl/ontology#GridDistanceMeasure_GreatCircle"
-		    ]
-		  }
-		];
     
     selection_json = JSON.stringify(selection_json);
     
-    console.log(selection_json);
     $.ajax({
     	url : "/owl/query",
     	type : 'POST',
@@ -109,14 +102,15 @@ function getValues(){
     	contentType : 'application/json',
     	data : selection_json
     	}).done(function(data){
+    		console.log(data);
     		var table_to_be_inserted = '<table id = "hook_added_table">';
     		for(var key in data){
-    			console.log(key + " -> ");
+    			//console.log(key + " -> ");
     			table_to_be_inserted = table_to_be_inserted + '<tr><td><b>' + key + '</b></td></tr>';
     			for(var val in data[key]){
     				table_to_be_inserted = table_to_be_inserted + '<tr><td>' + data[key][val]['label'] + '</td><td>' + data[key][val]['description'] + '</td></tr>';
-    				console.log(data[key][val]['label']);
-    				console.log(data[key][val]['description']);
+    				//console.log(data[key][val]['label']);
+    				//console.log(data[key][val]['description']);
     			}
     		   	table_to_be_inserted = table_to_be_inserted + '<tr></tr>';
     		}
