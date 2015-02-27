@@ -58,12 +58,12 @@ code {
 	margin-left:5%;
 	margin-top:5px;
 	line-height:30px;
-	background-color:#eeeeee;
+	/*background-color:#eeeeee;*/
 	height:465px;
 	width:39%;
 	float:left;
 	padding:5px;
-	overflow:scroll;
+	/*overflow:scroll;*/
 }
 
 #section1 {

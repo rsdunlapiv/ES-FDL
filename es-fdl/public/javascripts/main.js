@@ -28,7 +28,7 @@ $(document).ready(function () {
     {
         source: dataAdapter,
         altRows: false,
-        width: 500,
+        width: 300,
         selectionMode: 'custom',
         checkboxes: function (rowKey, dataRow) {
 	    var leaf = dataRow.leaf;
@@ -39,8 +39,8 @@ $(document).ready(function () {
         //$("#first").jqxTreeGrid('expandRow', '2');
     },
     columns: [
-        { text: "Label", align: "left", dataField: "label", width: 300 },
-        { text: "Description", align: "left", dataField: "desc", width: 200}             
+        { text: "Label", align: "left", dataField: "label", width: 300 }
+        //{ text: "Description", align: "left", dataField: "desc", width: 200}             
     ]});
       // Apply custom layout depending on the user's choice.
     });
