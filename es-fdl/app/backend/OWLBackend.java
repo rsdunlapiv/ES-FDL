@@ -30,6 +30,7 @@ import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.util.DefaultPrefixManager;
 import org.semanticweb.owlapi.util.ShortFormProvider;
 import org.semanticweb.owlapi.util.SimpleShortFormProvider;
+import org.stringtemplate.v4.ST;
 
 import com.fasterxml.jackson.databind.JsonNode;
 
@@ -76,39 +77,55 @@ public class OWLBackend {
 	
 	public List<Map<String,Object>> query(JsonNode json) {
 		
+		if (Application.isDebug) {
+			//reload every time while debugging and change ontology frequently
+			loadOntology();
+		}
+		
+		//the final result list
 		List<Map<String,Object>> ret = new ArrayList<Map<String,Object>>();
+		
+		//the query map has the class name as the key and the
+		//list of selected instances as the value, e.g.:
+		// GridCoordinateSystem => [Cartesian, Spherical]
+		Map<String,List<String>> queryMap = new HashMap<String,List<String>>();
 		
 		Iterator<JsonNode> iter = json.elements();
 		while (iter.hasNext()) {
 			JsonNode jsn = iter.next();
-			String parentiri = jsn.get("parentiri").asText();
-			Logger.info("parentiri=" + parentiri);
+			IRI parentIRI = IRI.create(jsn.get("parentiri").asText());
+			String parentClassName = parentIRI.getFragment();
+			//Logger.info("iri fragment =" + iri.getFragment());
 			
+			List<String> instanceList = new ArrayList<String>();
 			Iterator<JsonNode> selected = jsn.get("selected").elements();
 			while (selected.hasNext()) {
 				JsonNode jsns = selected.next();
-				String selectediri = jsns.asText();
-				Logger.info("selected=" + selectediri);
+				IRI selectedIRI = IRI.create(jsns.asText());
+				String instanceName = selectedIRI.getFragment();
+				instanceList.add(instanceName);
 			}
+			queryMap.put(parentClassName, instanceList);
 		}
 		
 		//String query = "ModelingInfrastructure and (hasBasicCapabilities some ({AngleConversion}))";
-		//OWLClassExpression expr = parseManchester(manager, owlOntology, query);
-		//System.out.println("Parsed expression: " + expr);
-		//OWLAxiom axiom = factory.getOWLEquivalentClassesAxiom(classQuery, expr);
-		//manager.addAxiom(owlOntology, axiom);
 		
 		OWLReasoner reasoner = new Reasoner.ReasonerFactory().createReasoner(ontology);
 		ShortFormProvider shortFormProvider = new SimpleShortFormProvider();
 		
 		DLQueryEngine engine = new DLQueryEngine(reasoner, 	shortFormProvider);
 		
-		String query = "ModelingInfrastructure";
+		ST query = new ST("ModelingInfrastructure and <qm:{k  | allows<k> some <leftcurly> <qm.(k):{ins | <ins>}; separator=\", \"> <rightcurly> }; separator=\" and \">");
+		query.add("qm", queryMap);
+		query.add("leftcurly", "{");  //required due to StringTemplate
+		query.add("rightcurly", "}");
+		
+		Logger.debug("Query: " + query.render());
+		//String query = "ModelingInfrastructure";
 		
 		try {
-			Set<OWLNamedIndividual> instances = engine.getInstances(query, false);
+			Set<OWLNamedIndividual> instances = engine.getInstances(query.render(), false);
 			for (OWLNamedIndividual i : instances) {
-				//Logger.info("Adding: " + i);
 				Map<String,Object> fields = new HashMap<String,Object>();
 				fields.put("iri", i.getIRI().toString());
 				fields.put("label", getLabel(i));

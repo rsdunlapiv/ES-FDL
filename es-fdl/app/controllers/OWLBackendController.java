@@ -18,7 +18,7 @@ public class OWLBackendController extends Controller {
 	
 	public static Result query() {
 		JsonNode json = request().body().asJson();
-		//Logger.info("RESULT: " + Json.toJson(backend.query(json)));
+		//Logger.debug("request json: " + json);
 		return ok(Json.toJson(backend.query(json)));
 	}
 	

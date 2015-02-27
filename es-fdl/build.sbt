@@ -17,3 +17,5 @@ libraryDependencies += "net.sourceforge.owlapi" % "owlapi-distribution" % "3.4.1
 
 libraryDependencies += "com.hermit-reasoner" % "org.semanticweb.hermit" % "1.3.8.4"
 
+libraryDependencies += "org.antlr" % "stringtemplate" % "4.0.2"
+

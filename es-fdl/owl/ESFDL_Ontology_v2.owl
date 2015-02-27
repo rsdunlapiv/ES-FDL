@@ -104,6 +104,9 @@
         <ObjectProperty IRI="#allowsGridCoordinateSystem"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#allowsGridDistanceMeasure"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#allowsGridNesting"/>
     </Declaration>
     <Declaration>
@@ -126,6 +129,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#defaultGridCoordinateSystem"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#defaultGridDistanceMeasure"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#defaultGridNesting"/>
@@ -182,6 +188,9 @@
         <ObjectProperty IRI="#ignoresGridCoordinateSystem"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#ignoresGridDistanceMeasure"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#ignoresGridNesting"/>
     </Declaration>
     <Declaration>
@@ -198,6 +207,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#optionalGridCoordinateSystem"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#optionalGridDistanceMeasure"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#optionalGridNesting"/>
@@ -231,6 +243,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#requiresGridCoordinateSystem"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#requiresGridDistanceMeasure"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#requiresGridNesting"/>
@@ -746,8 +761,22 @@
         <NamedIndividual IRI="#ESMF"/>
         <NamedIndividual IRI="#GridCoordinateSystem_Cartesian"/>
     </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#optionalGridDistanceMeasure"/>
+        <NamedIndividual IRI="#ESMF"/>
+        <NamedIndividual IRI="#GridDistanceMeasure_StraightLine"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#optionalGridDistanceMeasure"/>
+        <NamedIndividual IRI="#ESMF"/>
+        <NamedIndividual IRI="#GridDistanceMeasure_GreatCircle"/>
+    </ObjectPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#allowsGridCoordinateSystem"/>
+        <ObjectProperty IRI="#allowsGridProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#allowsGridDistanceMeasure"/>
         <ObjectProperty IRI="#allowsGridProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
@@ -781,6 +810,10 @@
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#defaultGridCoordinateSystem"/>
         <ObjectProperty IRI="#defaultProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#defaultGridDistanceMeasure"/>
+        <ObjectProperty IRI="#allowsGridDistanceMeasure"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#defaultGridNesting"/>
@@ -863,6 +896,10 @@
         <ObjectProperty IRI="#allowsGridCoordinateSystem"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#ignoresGridDistanceMeasure"/>
+        <ObjectProperty IRI="#allowsGridDistanceMeasure"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#ignoresGridNesting"/>
         <ObjectProperty IRI="#allowsGridNesting"/>
     </SubObjectPropertyOf>
@@ -889,6 +926,10 @@
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#optionalGridCoordinateSystem"/>
         <ObjectProperty IRI="#optionalProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#optionalGridDistanceMeasure"/>
+        <ObjectProperty IRI="#allowsGridDistanceMeasure"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#optionalGridNesting"/>
@@ -949,6 +990,10 @@
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#requiresGridCoordinateSystem"/>
         <ObjectProperty IRI="#requiresProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#requiresGridDistanceMeasure"/>
+        <ObjectProperty IRI="#defaultGridDistanceMeasure"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#requiresGridNesting"/>
@@ -1167,6 +1212,11 @@
         <ObjectProperty IRI="#optionalGridCoordinateSystem"/>
     </DisjointObjectProperties>
     <DisjointObjectProperties>
+        <ObjectProperty IRI="#defaultGridDistanceMeasure"/>
+        <ObjectProperty IRI="#ignoresGridDistanceMeasure"/>
+        <ObjectProperty IRI="#optionalGridDistanceMeasure"/>
+    </DisjointObjectProperties>
+    <DisjointObjectProperties>
         <ObjectProperty IRI="#defaultGridNesting"/>
         <ObjectProperty IRI="#ignoresGridNesting"/>
         <ObjectProperty IRI="#optionalGridNesting"/>
@@ -1200,6 +1250,10 @@
     <DisjointObjectProperties>
         <ObjectProperty IRI="#optionalGridCoordinateSystem"/>
         <ObjectProperty IRI="#requiresGridCoordinateSystem"/>
+    </DisjointObjectProperties>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#optionalGridDistanceMeasure"/>
+        <ObjectProperty IRI="#requiresGridDistanceMeasure"/>
     </DisjointObjectProperties>
     <DisjointObjectProperties>
         <ObjectProperty IRI="#optionalGridNesting"/>
