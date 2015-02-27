@@ -74,9 +74,9 @@ public class OWLBackend {
 		this.pm = new DefaultPrefixManager(ontologyIRI.toString());
 	}
 	
-	public List<String> query(JsonNode json) {
+	public List<Map<String,Object>> query(JsonNode json) {
 		
-		List<String> ret = new ArrayList<String>();
+		List<Map<String,Object>> ret = new ArrayList<Map<String,Object>>();
 		
 		Iterator<JsonNode> iter = json.elements();
 		while (iter.hasNext()) {
@@ -104,16 +104,25 @@ public class OWLBackend {
 		DLQueryEngine engine = new DLQueryEngine(reasoner, 	shortFormProvider);
 		
 		String query = "ModelingInfrastructure";
+		
 		try {
 			Set<OWLNamedIndividual> instances = engine.getInstances(query, false);
 			for (OWLNamedIndividual i : instances) {
-				Logger.info("Adding: " + i);
-				ret.add(getLabel(i));
+				//Logger.info("Adding: " + i);
+				Map<String,Object> fields = new HashMap<String,Object>();
+				fields.put("iri", i.getIRI().toString());
+				fields.put("label", getLabel(i));
+				String desc = getAnnotationPropertyValue(i, factory.getRDFSComment());
+				if (desc != null) {
+					fields.put("desc", desc);
+				}
+				ret.add(fields);
 			}
 		}
 		catch (ParserException e) {
 			Logger.error("Invalid query: " + query, e);
 		}
+		
 		return ret;
 	}
 	

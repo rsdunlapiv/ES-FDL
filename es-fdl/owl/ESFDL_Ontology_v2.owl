@@ -1214,6 +1214,11 @@
         <ObjectProperty IRI="#requiresGridTopologicalStructure"/>
     </DisjointObjectProperties>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CSDMS</IRI>
+        <Literal datatypeIRI="&xsd;string">Community Surface Dynamics Modeling System description goes here ....</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#CSDMS</IRI>
         <Literal datatypeIRI="&xsd;string">CSDMS</Literal>
@@ -1262,6 +1267,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#CouplingFrequency_Fixed</IRI>
         <Literal datatypeIRI="&xsd;string">Fixed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ESMF</IRI>
+        <Literal datatypeIRI="&xsd;string">The Earth System Modeling Framework is .....</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1449,6 +1459,11 @@
         <Literal datatypeIRI="&xsd;string">Iteration Property</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MCT</IRI>
+        <Literal datatypeIRI="&xsd;string">Model Coupling Toolkit description</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#MCT</IRI>
         <Literal datatypeIRI="&xsd;string">MCT</Literal>
@@ -1542,6 +1557,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#ModelingInfrastructure</IRI>
         <Literal datatypeIRI="&xsd;string">Modeling Infrastructure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OASIS</IRI>
+        <Literal datatypeIRI="&xsd;string">OASIS is a European coupler</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
