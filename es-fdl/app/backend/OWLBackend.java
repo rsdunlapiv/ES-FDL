@@ -105,13 +105,14 @@ public class OWLBackend {
 		
 		String query = "ModelingInfrastructure";
 		try {
-			Set<OWLNamedIndividual> instances = engine.getInstances(query, true);
+			Set<OWLNamedIndividual> instances = engine.getInstances(query, false);
 			for (OWLNamedIndividual i : instances) {
+				Logger.info("Adding: " + i);
 				ret.add(getLabel(i));
 			}
 		}
 		catch (ParserException e) {
-			
+			Logger.error("Invalid query: " + query, e);
 		}
 		return ret;
 	}

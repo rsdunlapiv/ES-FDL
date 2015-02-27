@@ -12,6 +12,8 @@ import org.semanticweb.owlapi.reasoner.NodeSet;
 import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.util.ShortFormProvider;
 
+import play.Logger;
+
 public class DLQueryEngine {
 	
 	private final OWLReasoner reasoner;
@@ -66,6 +68,7 @@ public class DLQueryEngine {
 		}
 		OWLClassExpression classExpression = parser
 				.parseClassExpression(classExpressionString);
+		Logger.info("Class expression: " + classExpression);
 		NodeSet<OWLNamedIndividual> individuals = reasoner.getInstances(classExpression,
 				direct);
 		return individuals.getFlattened();
