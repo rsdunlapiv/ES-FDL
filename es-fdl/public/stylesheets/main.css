@@ -1,6 +1,6 @@
 @media (min-width: 1200px) {
   .container {
-    width: 1400px;
+    width: 100%;
   }
 }
 
@@ -56,14 +56,22 @@ code {
 
 #nav {
 	margin-left:5%;
-	margin-top:5px;
+	/*margin-top:5px;*/
 	line-height:30px;
 	/*background-color:#eeeeee;*/
-	height:465px;
-	width:39%;
+	height:495px;
+	width:25%;
 	float:left;
 	padding:5px;
-	/*overflow:scroll;*/
+}
+
+#newnav {
+	height:445px;
+	overflow:auto;
+}
+
+#submitbutton {
+	margin-top:10px;
 }
 
 #section1 {
@@ -71,11 +79,11 @@ code {
 	margin-top:5px;
 	margin-left:5px;
 	background-color:#EFEFEF;
-	width:48%;
-	height:455px;
-	float:left;
+	width:55%;
+	height:495px;
+	float:right;
 	padding:10px;
-	overflow:scroll;
+	overflow:auto;
 }
 
 /*
