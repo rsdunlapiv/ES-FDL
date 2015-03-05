@@ -1,0 +1,38 @@
+@(title: String = "browse")
+@master(""){
+	<li class="active"><a href="/browse">Browse</a></li>
+	<li><a href="/search">Search</a></li>
+	<li><a href="/connect">Connect</a></li>
+	<li><a href="/about">About</a></li>
+}{
+	<div class="container">
+		<div id="nav">
+			<div id="newnav">
+				<div id="TreeGrid">
+				</div>
+			</div>
+			<form action="javascript:getValues()">
+				<input type="submit" name="modellingframework" id="submitbutton">
+			</form>
+		</div>
+		<div id="section1">
+			<center><h1>Results<h1></center>
+			<div id="table_hook">
+				
+			</div>
+		</div>
+	</div>
+}{
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/jqwidgets/jqxcore.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/jqwidgets/jqxdockpanel.js")"></script>
+	<script type="text/javascript" src="@routes.Assets.at("javascripts/jqwidgets/jqxbuttons.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/jqwidgets/jqxscrollbar.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/jqwidgets/jqxdatatable.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/jqwidgets/jqxtreegrid.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/jqwidgets/jqxdata.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/jqwidgets/jqxcheckbox.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/jqwidgets/jqxlistbox.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/jqwidgets/jqxsplitter.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/jqwidgets/jqxtooltip.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/main.js")"></script>
+}

@@ -1,0 +1,39 @@
+@(title: String = "front")(header_elements: Html)(content: Html)(scripts: Html)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="@routes.Assets.at("javascripts/jqwidgets/styles/jqx.base.css")" type="text/css" />
+    <link rel="stylesheet" href="@routes.Assets.at("bootstrap-3.3.2-dist/css/bootstrap-yeti.min.css")" type="text/css" />  
+	<link rel="stylesheet" href="@routes.Assets.at("stylesheets/main.css")" type="text/css" />
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/scripts/jquery-1.11.1.min.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("bootstrap-3.3.2-dist/js/bootstrap.min.js")"></script>
+    @scripts
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Earth System Modeling Infrastructure Explorer</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+			@header_elements
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+	@content
+	<footer class="footer">
+      <div class="container">
+        <p class="text-muted">This project supported by the National Science Foundation.  <a href="http://www.earthsystemcog.org/projects/es-fdl"/><b>Earth System Framework Description Language</b> Home Page</a></p>
+      </div>
+    </footer>
+</body>
+</html>

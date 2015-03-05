@@ -16,15 +16,22 @@ import play.mvc.Result;
 import views.html.index;
 import views.html.submit;
 import views.html.front;
+import views.html.browse;
+import views.html.search;
+import views.html.connect;
+import views.html.about;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 public class Application extends Controller {
 
-	/* used in various places to determine if we are in a dev environment or production */
+	/*
+	 * used in various places to determine if we are in a dev environment or
+	 * production
+	 */
 	public final static boolean isDebug = true;
-	
+
 	final static Form<Modellinginfrastructure> modellingInfraForm = Form
 			.form(Modellinginfrastructure.class);
 
@@ -34,6 +41,22 @@ public class Application extends Controller {
 
 	public static Result front() {
 		return ok(front.render(""));
+	}
+
+	public static Result browse() {
+		return ok(browse.render(""));
+	}
+
+	public static Result search() {
+		return ok(search.render(""));
+	}
+
+	public static Result connect() {
+		return ok(connect.render(""));
+	}
+
+	public static Result about() {
+		return ok(about.render(""));
 	}
 
 	public static Result submit() {

@@ -7,6 +7,14 @@ GET     /                           controllers.Application.index()
 
 GET     /front						controllers.Application.front()
 
+GET     /browse                     controllers.Application.browse()
+
+GET     /search                     controllers.Application.search()
+
+GET     /connect                    controllers.Application.connect()
+
+GET     /about                      controllers.Application.about()
+
 POST    /getname/                   controllers.Application.submit()
 
 GET     /name/:id                   controllers.Application.getNames(id: String)
