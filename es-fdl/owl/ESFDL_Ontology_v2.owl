@@ -95,6 +95,9 @@
         <Class IRI="#SimulationMembership"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#SoftwareLicense"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#StepScheme"/>
     </Declaration>
     <Declaration>
@@ -174,6 +177,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasSimulationMembership"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSoftwareLicense"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasStepScheme"/>
@@ -269,6 +275,24 @@
         <ObjectProperty IRI="#requiresStepSize"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#appliedToDomains"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#homePage"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#optionalSoftwareDependency"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#requiredSoftwareDependency"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#usage"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BSDLicense"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#CSDMS"/>
     </Declaration>
     <Declaration>
@@ -353,6 +377,9 @@
         <NamedIndividual IRI="#MCT"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#MITLicense"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Mediation_AngleConversion"/>
     </Declaration>
     <Declaration>
@@ -419,7 +446,13 @@
         <AnnotationProperty IRI="#XMLMapping"/>
     </Declaration>
     <Declaration>
+        <AnnotationProperty IRI="#longName"/>
+    </Declaration>
+    <Declaration>
         <AnnotationProperty IRI="#relatedProperty"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#shortName"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="#uiSearchTreeExclude"/>
@@ -438,6 +471,9 @@
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="#uiSearchTreeTopLevel"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#uiTab"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="#Query1"/>
@@ -556,6 +592,10 @@
         <Class IRI="#StepSize"/>
     </DisjointClasses>
     <ClassAssertion>
+        <Class IRI="#SoftwareLicense"/>
+        <NamedIndividual IRI="#BSDLicense"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#ModelingInfrastructure"/>
         <NamedIndividual IRI="#CSDMS"/>
     </ClassAssertion>
@@ -668,6 +708,10 @@
         <NamedIndividual IRI="#MCT"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#SoftwareLicense"/>
+        <NamedIndividual IRI="#MITLicense"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Mediation"/>
         <NamedIndividual IRI="#Mediation_AngleConversion"/>
     </ClassAssertion>
@@ -771,6 +815,41 @@
         <NamedIndividual IRI="#ESMF"/>
         <NamedIndividual IRI="#GridDistanceMeasure_GreatCircle"/>
     </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#homePage"/>
+        <NamedIndividual IRI="#ESMF"/>
+        <Literal datatypeIRI="&xsd;string">http://www.earthsystemmodeling.org</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#optionalSoftwareDependency"/>
+        <NamedIndividual IRI="#ESMF"/>
+        <Literal datatypeIRI="&xsd;string">NetCDF - version 3.6.x or newer</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#optionalSoftwareDependency"/>
+        <NamedIndividual IRI="#ESMF"/>
+        <Literal datatypeIRI="&xsd;string">LAPACK - version 3.x or newer</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#requiredSoftwareDependency"/>
+        <NamedIndividual IRI="#ESMF"/>
+        <Literal datatypeIRI="&xsd;string">GNU&apos;s gcc compiler - for a standard cpp preprocessor implementation</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#requiredSoftwareDependency"/>
+        <NamedIndividual IRI="#ESMF"/>
+        <Literal datatypeIRI="&xsd;string">Fortran90 (or later) compiler</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#requiredSoftwareDependency"/>
+        <NamedIndividual IRI="#ESMF"/>
+        <Literal datatypeIRI="&xsd;string">MPI implementation compatible with compiler</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#requiredSoftwareDependency"/>
+        <NamedIndividual IRI="#ESMF"/>
+        <Literal datatypeIRI="&xsd;string">C++ compiler</Literal>
+    </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#allowsGridCoordinateSystem"/>
         <ObjectProperty IRI="#allowsGridProperty"/>
@@ -1267,6 +1346,41 @@
         <ObjectProperty IRI="#optionalGridTopologicalStructure"/>
         <ObjectProperty IRI="#requiresGridTopologicalStructure"/>
     </DisjointObjectProperties>
+    <DataPropertyRange>
+        <DataProperty IRI="#appliedToDomains"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#homePage"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#optionalSoftwareDependency"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#requiredSoftwareDependency"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#usage"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#BSDLicense</IRI>
+        <Literal datatypeIRI="&xsd;string">BSD License</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#longName"/>
+        <IRI>#CSDMS</IRI>
+        <Literal datatypeIRI="&xsd;string">Community Surface Dynamics Modeling System</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#shortName"/>
+        <IRI>#CSDMS</IRI>
+        <Literal datatypeIRI="&xsd;string">CSDMS</Literal>
+    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#CSDMS</IRI>
@@ -1321,6 +1435,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#CouplingFrequency_Fixed</IRI>
         <Literal datatypeIRI="&xsd;string">Fixed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#longName"/>
+        <IRI>#ESMF</IRI>
+        <Literal datatypeIRI="&xsd;string">Earth System Modeling Framework</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#shortName"/>
+        <IRI>#ESMF</IRI>
+        <Literal datatypeIRI="&xsd;string">ESMF</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1523,6 +1647,11 @@
         <Literal datatypeIRI="&xsd;string">MCT</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MITLicense</IRI>
+        <Literal datatypeIRI="&xsd;string">MIT License</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty IRI="#uiSearchTreeOrder"/>
         <IRI>#Mediation</IRI>
         <Literal datatypeIRI="&xsd;int">30</Literal>
@@ -1639,6 +1768,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SoftwareLicense</IRI>
+        <Literal datatypeIRI="&xsd;string">Software License</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#StepScheme</IRI>
         <Literal datatypeIRI="&xsd;string">Step Scheme</Literal>
     </AnnotationAssertion>
@@ -1682,6 +1816,55 @@
         <IRI>#StepSize_LocalAdaptive</IRI>
         <Literal datatypeIRI="&xsd;string">Local Adaptive</Literal>
     </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#uiTab"/>
+        <IRI>#appliedToDomains</IRI>
+        <Literal datatypeIRI="&xsd;string">General</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#appliedToDomains</IRI>
+        <Literal datatypeIRI="&xsd;string">The scientific domains to which the infrastructure has been applied</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#uiTab"/>
+        <IRI>#hasSoftwareLicense</IRI>
+        <Literal datatypeIRI="&xsd;string">General</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#uiTab"/>
+        <IRI>#optionalSoftwareDependency</IRI>
+        <Literal datatypeIRI="&xsd;string">General</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#optionalSoftwareDependency</IRI>
+        <Literal datatypeIRI="&xsd;string">Optional Software Dependency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#uiTab"/>
+        <IRI>#requiredSoftwareDependency</IRI>
+        <Literal datatypeIRI="&xsd;string">General</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#requiredSoftwareDependency</IRI>
+        <Literal datatypeIRI="&xsd;string">Required Software Dependency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#uiTab"/>
+        <IRI>#usage</IRI>
+        <Literal datatypeIRI="&xsd;string">General</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#usage</IRI>
+        <Literal datatypeIRI="&xsd;string">Models or modeling systems that use the infrastructure in any way</Literal>
+    </AnnotationAssertion>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="#uiTab"/>
+        <AbbreviatedIRI>xsd:string</AbbreviatedIRI>
+    </AnnotationPropertyRange>
 </Ontology>
 
 
