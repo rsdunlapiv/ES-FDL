@@ -105,7 +105,7 @@ function getValues(){
     		console.log(data);
     		for(var i=0;i<data.length;i++){
     			var label = data[i]['label'];
-    			data[i]['label'] = '<a href="/properties/'+ label +'">' + label + '</a>';
+    			data[i]['label'] = '<a href="/getmodelinginfradetails/'+ label +'">' + label + '</a>';
     		}
 			var source = 
 			{

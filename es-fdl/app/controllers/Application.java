@@ -20,6 +20,7 @@ import views.html.browse;
 import views.html.search;
 import views.html.connect;
 import views.html.about;
+import views.html.details;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
@@ -57,6 +58,10 @@ public class Application extends Controller {
 
 	public static Result about() {
 		return ok(about.render(""));
+	}
+
+	public static Result details(String name) {
+		return ok(details.render(name));
 	}
 
 	public static Result submit() {

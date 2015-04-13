@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1424974040299" name="duplicate:http://www.earthsystemcog.org/projects/es-fdl/ontology" uri="EFFDL_From_Questionnaire.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1424974040299" name="duplicate:http://www.earthsystemcog.org/projects/es-fdl/ontology" uri="ESFDL_Ontology_v2.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1428384194455" name="duplicate:http://www.earthsystemcog.org/projects/es-fdl/ontology" uri="EFFDL_From_Questionnaire.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1428384194455" name="duplicate:http://www.earthsystemcog.org/projects/es-fdl/ontology" uri="ESFDL_Ontology_v2.owl"/>
     </group>
 </catalog>

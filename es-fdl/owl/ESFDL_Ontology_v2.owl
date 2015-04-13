@@ -11,10 +11,10 @@
 
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.earthsystemcog.org/projects/es-fdl/ontology"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.earthsystemcog.org/projects/es-fdl/ontology"
      versionIRI="http://www.earthsystemcog.org/projects/es-fdl/ontology/0.2">
     <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
@@ -482,8 +482,8 @@
             <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="#allowsGridCoordinateSystem"/>
                 <ObjectOneOf>
-                    <NamedIndividual IRI="#GridCoordinateSystem_Cartesian"/>
                     <NamedIndividual IRI="#GridCoordinateSystem_Spherical"/>
+                    <NamedIndividual IRI="#GridCoordinateSystem_Cartesian"/>
                 </ObjectOneOf>
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
@@ -798,22 +798,22 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#optionalGridCoordinateSystem"/>
         <NamedIndividual IRI="#ESMF"/>
-        <NamedIndividual IRI="#GridCoordinateSystem_Spherical"/>
+        <NamedIndividual IRI="#GridCoordinateSystem_Cartesian"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#optionalGridCoordinateSystem"/>
         <NamedIndividual IRI="#ESMF"/>
-        <NamedIndividual IRI="#GridCoordinateSystem_Cartesian"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#optionalGridDistanceMeasure"/>
-        <NamedIndividual IRI="#ESMF"/>
-        <NamedIndividual IRI="#GridDistanceMeasure_StraightLine"/>
+        <NamedIndividual IRI="#GridCoordinateSystem_Spherical"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#optionalGridDistanceMeasure"/>
         <NamedIndividual IRI="#ESMF"/>
         <NamedIndividual IRI="#GridDistanceMeasure_GreatCircle"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#optionalGridDistanceMeasure"/>
+        <NamedIndividual IRI="#ESMF"/>
+        <NamedIndividual IRI="#GridDistanceMeasure_StraightLine"/>
     </ObjectPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#homePage"/>
@@ -823,17 +823,17 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#optionalSoftwareDependency"/>
         <NamedIndividual IRI="#ESMF"/>
-        <Literal datatypeIRI="&xsd;string">NetCDF - version 3.6.x or newer</Literal>
+        <Literal datatypeIRI="&xsd;string">LAPACK - version 3.x or newer</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#optionalSoftwareDependency"/>
         <NamedIndividual IRI="#ESMF"/>
-        <Literal datatypeIRI="&xsd;string">LAPACK - version 3.x or newer</Literal>
+        <Literal datatypeIRI="&xsd;string">NetCDF - version 3.6.x or newer</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#requiredSoftwareDependency"/>
         <NamedIndividual IRI="#ESMF"/>
-        <Literal datatypeIRI="&xsd;string">GNU&apos;s gcc compiler - for a standard cpp preprocessor implementation</Literal>
+        <Literal datatypeIRI="&xsd;string">C++ compiler</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#requiredSoftwareDependency"/>
@@ -848,7 +848,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#requiredSoftwareDependency"/>
         <NamedIndividual IRI="#ESMF"/>
-        <Literal datatypeIRI="&xsd;string">C++ compiler</Literal>
+        <Literal datatypeIRI="&xsd;string">GNU&apos;s gcc compiler - for a standard cpp preprocessor implementation</Literal>
     </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#allowsGridCoordinateSystem"/>
@@ -1830,6 +1830,16 @@
         <AnnotationProperty IRI="#uiTab"/>
         <IRI>#hasSoftwareLicense</IRI>
         <Literal datatypeIRI="&xsd;string">General</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#uiTab"/>
+        <IRI>#homePage</IRI>
+        <Literal datatypeIRI="&xsd;string">Models</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#homePage</IRI>
+        <Literal datatypeIRI="&xsd;string">Home Page</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#uiTab"/>

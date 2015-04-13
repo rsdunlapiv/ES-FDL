@@ -3,7 +3,7 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.Application.index()
+GET     /                           controllers.Application.search()
 
 GET     /front						controllers.Application.front()
 
@@ -14,6 +14,8 @@ GET     /search                     controllers.Application.search()
 GET     /connect                    controllers.Application.connect()
 
 GET     /about                      controllers.Application.about()
+
+GET     /details/:name              controllers.Application.details(name: String)
 
 POST    /getname/                   controllers.Application.submit()
 
@@ -27,5 +29,8 @@ POST	/owl/query					controllers.OWLBackendController.query()
 
 POST    /getdummydata				controllers.Application.getDummyData()
 
+GET     /getallmodelinginfrabriefdetails/:name    controllers.OWLBackendController.getModelingInfrastructureBriefDetails(name: String)
+
+GET     /getmodelinginfradetails/:name    controllers.OWLBackendController.getModelingInfrastructureDetails(name: String)
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
