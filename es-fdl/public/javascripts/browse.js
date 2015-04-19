@@ -1,14 +1,24 @@
 function fecthDataAndUpdateContent(modellinginfraname){
-	var url = "/getallmodelinginfrabriefdetails/" + modellinginfraname
-	var link_to_details = "/details/" + modellinginfraname
+	var url = "/getallmodelinginfrabriefdetails/" + modellinginfraname;
+	var link_to_details = "/details/" + modellinginfraname;
 	$.ajax({
 		url : url,
 		type: 'GET',
 		dataType: 'json',
 		contentType: 'application/json',
 	}).done(function(data){
-		$("#longname").empty().append("<a href="+ link_to_details +"><b>" + data['longName'] + "</b></a>")
+		console.log(data['longName']);
+		if(data['longName'] != undefined){
+			$("#longname").empty().append("<a href="+ link_to_details +"><b>" + data['longName'] + "</b></a>");
+		}else{
+			$("#longname").empty().append("<a href="+ link_to_details +"><b>" + data['shortName'] + "</b></a>");
+		}
 		$("#details").empty().append(data['comment'])
+		if(data['homePage'] != undefined){
+			$("#homepage").empty().append(data['homePage']);
+		}else{
+			$("#homepage").empty();
+		}
 	});
 }
 
@@ -18,7 +28,7 @@ $(document).ready(function () {
    		"CSDMS",
    		"OASIS",
    		"MCT"];
-	$("#ListBox").jqxListBox({ selectedIndex: 0, source: source, width: 200, height: 150});
+	$("#ListBox").jqxListBox({ selectedIndex: 0, source: source, width: 210, height: 150});
 	var item = $('#ListBox').jqxListBox('getItem', 0);
 	console.log(item['value']);
 	fecthDataAndUpdateContent(item['value']);

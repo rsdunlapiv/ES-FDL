@@ -90,12 +90,45 @@ code {
 	margin-right:20%;
 	margin-top:5px;
 	margin-left:5px;
-	background-color:#EFEFEF;
+	/*background-color:#EFEFEF;*/
 	width:60%;
 	height:495px;
 	float:right;
 	padding:10px;
 	overflow:auto;
+}
+
+#details {
+	margin-top:10px;
+}
+
+#homepage {
+	margin-top:10px;
+}
+#data_table_div {
+	margin-top:30px;
+	margin-left:20px;
+	height:330px;
+	overflow:auto;	
+}
+
+#ListBox_heading{
+	background-color:#EFEFEF;
+	width:210px;
+	padding-left:7px;
+}
+
+#name_div{
+	margin-bottom:10px;
+	font-size: 150%;
+}
+
+#home_page_div{
+	margin-bottom:10px;
+}
+
+td {
+	padding:2px 20px 2px 10px;
 }
 
 /*

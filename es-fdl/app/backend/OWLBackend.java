@@ -19,6 +19,7 @@ import org.semanticweb.owlapi.model.OWLAnnotationProperty;
 import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLClassExpression;
 import org.semanticweb.owlapi.model.OWLDataFactory;
+import org.semanticweb.owlapi.model.OWLDataProperty;
 import org.semanticweb.owlapi.model.OWLDataPropertyExpression;
 import org.semanticweb.owlapi.model.OWLEntity;
 import org.semanticweb.owlapi.model.OWLIndividual;
@@ -308,7 +309,17 @@ public class OWLBackend {
 		for (OWLIndividual I : modelinginfrastructure_class
 				.getIndividuals(ontology)) {
 			OWLEntity entity = (OWLEntity) I;
+			Map<OWLDataPropertyExpression, Set<OWLLiteral>> dataProps = I
+					.getDataPropertyValues(ontology);
 			HashMap<String, String> temp = new HashMap<String, String>();
+			for (Map.Entry<OWLDataPropertyExpression, Set<OWLLiteral>> entry : dataProps
+					.entrySet()) {
+				if (entry.getKey().toString().contains("homePage")) {
+					for (OWLLiteral temp_lit : entry.getValue()) {
+						temp.put("homePage", temp_lit.getLiteral());
+					}
+				}
+			}
 			for (OWLAnnotation annotation : entity.getAnnotations(ontology)) {
 				if (annotation.getProperty().toString().contains("label")) {
 					temp.put(
@@ -333,7 +344,6 @@ public class OWLBackend {
 			}
 			modelinginfra_data.put(temp.get("label"), temp);
 		}
-		System.out.println(modelinginfra_data);
 		return modelinginfra_data.get(name);
 	}
 
@@ -351,11 +361,23 @@ public class OWLBackend {
 			OWLDataPropertyExpression data_prop = e.getKey();
 			String property = e.getKey().toString().split("#")[1];
 			property = property.substring(0, property.length() - 1);
+			OWLIndividual temp_individual = this.factory
+					.getOWLNamedIndividual(IRI.create(this.ontology
+							.getOntologyID().getOntologyIRI().toString()
+							+ "#" + property));
+			OWLEntity temp_entity = (OWLEntity) temp_individual;
+			for (OWLAnnotation annotation : temp_entity
+					.getAnnotations(ontology)) {
+				if (annotation.getProperty().toString().contains("label")) {
+					property = annotation.getValue().toString()
+							.split("\"\\^\\^")[0].substring(1);
+				}
+			}
 			ArrayList<String> values = new ArrayList<String>();
 			HashMap<String, ArrayList<String>> prop_and_values = new HashMap<String, ArrayList<String>>();
 			for (OWLLiteral o : e.getValue()) {
-				String temp_str = o.toString().split("\"\\^\\^")[0];
-				temp_str = temp_str.substring(1, temp_str.length());
+				String temp_str = o.toString().split("\"\\^\\^")[0]
+						.substring(1);
 				values.add(temp_str);
 			}
 			prop_and_values.put(property, values);
@@ -364,9 +386,7 @@ public class OWLBackend {
 			for (OWLAnnotation annotation : entity.getAnnotations(ontology)) {
 				if (annotation.getProperty().toString().contains("uiTab")) {
 					uiTab_value = annotation.getValue().toString()
-							.split("\"\\^\\^")[0];
-					uiTab_value = uiTab_value
-							.substring(1, uiTab_value.length());
+							.split("\"\\^\\^")[0].substring(1);
 				}
 			}
 			ArrayList<HashMap<String, ArrayList<String>>> temp;
@@ -380,5 +400,10 @@ public class OWLBackend {
 			data.put(uiTab_value, temp);
 		}
 		return data;
+	}
+
+	public static void main(String args[]) {
+		OWLBackend o = new OWLBackend();
+		o.getModellingInfrastructureBriefDetails("ESMF");
 	}
 }

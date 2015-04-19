@@ -1637,6 +1637,11 @@
         <Literal datatypeIRI="&xsd;string">Iteration Property</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty IRI="#shortName"/>
+        <IRI>#MCT</IRI>
+        <Literal datatypeIRI="&xsd;string">MCT</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#MCT</IRI>
         <Literal datatypeIRI="&xsd;string">Model Coupling Toolkit description</Literal>
@@ -1740,6 +1745,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#ModelingInfrastructure</IRI>
         <Literal datatypeIRI="&xsd;string">Modeling Infrastructure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#shortName"/>
+        <IRI>#OASIS</IRI>
+        <Literal datatypeIRI="&xsd;string">OASIS</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>

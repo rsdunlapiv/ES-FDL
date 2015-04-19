@@ -14,8 +14,8 @@ $(document).ready(function(){
 		for(var item in data){
 			console.log(item + '-->');
 			tab_names = tab_names + '<li>' + item + '</li>';
-			tab_contents = tab_contents + '<div>';
-			tab_contents = tab_contents + '<table>';
+			tab_contents = tab_contents + '<div id="data_table_div">';
+			tab_contents = tab_contents + '<table id="data_table">';
 			for(i=0; i<data[item].length; i++){
 				var obj = data[item][i];
 				for(var prop in obj){
@@ -29,6 +29,7 @@ $(document).ready(function(){
 						}
 						console.log(obj[prop][j]);
 					}
+				tab_contents = tab_contents + '<tr><td></td><td></td></tr><tr><td></td><td></td></tr>';
 				}
 			}
 			tab_contents = tab_contents + '</table></div>';
