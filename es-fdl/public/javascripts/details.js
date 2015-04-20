@@ -1,6 +1,20 @@
 $(document).ready(function(){
 	var currentLocationPathname = window.location.pathname;
 	var modelingInfra = currentLocationPathname.split("details/")[1];
+	var url = "/getallmodelinginfrabriefdetails/" + modelingInfra;
+	$.ajax({
+		url: url,
+		type: 'GET',
+		dataType: 'json',
+		contentType: 'application/json'
+	}).done(function(data){
+		if(data['longName'] != undefined){
+			$("#name_div").append('<b>' + data['longName'] + '</b>');
+		}
+		if(data['homePage'] != undefined){
+			$("#home_page_div").append('<a href="' + data['homePage'] + '">' + data['homePage'] + '</a>');
+		}
+	});
 	var url = '/getmodelinginfradetails/' + modelingInfra;
 	$.ajax({
 		url: url,
