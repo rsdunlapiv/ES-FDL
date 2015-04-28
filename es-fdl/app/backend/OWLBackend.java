@@ -25,6 +25,8 @@ import org.semanticweb.owlapi.model.OWLEntity;
 import org.semanticweb.owlapi.model.OWLIndividual;
 import org.semanticweb.owlapi.model.OWLLiteral;
 import org.semanticweb.owlapi.model.OWLNamedIndividual;
+import org.semanticweb.owlapi.model.OWLObjectProperty;
+import org.semanticweb.owlapi.model.OWLObjectPropertyExpression;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.model.PrefixManager;
@@ -365,6 +367,7 @@ public class OWLBackend {
 					.getOWLNamedIndividual(IRI.create(this.ontology
 							.getOntologyID().getOntologyIRI().toString()
 							+ "#" + property));
+			// To get label of that property
 			OWLEntity temp_entity = (OWLEntity) temp_individual;
 			for (OWLAnnotation annotation : temp_entity
 					.getAnnotations(ontology)) {
@@ -380,7 +383,9 @@ public class OWLBackend {
 						.substring(1);
 				values.add(temp_str);
 			}
+			// Add values related to each property in property and values map
 			prop_and_values.put(property, values);
+			// get the tab name for property if there is one
 			OWLEntity entity = (OWLEntity) data_prop;
 			String uiTab_value = null;
 			for (OWLAnnotation annotation : entity.getAnnotations(ontology)) {
@@ -389,6 +394,65 @@ public class OWLBackend {
 							.split("\"\\^\\^")[0].substring(1);
 				}
 			}
+			// Add properties and values map to corresponding
+			// uiTab key in data
+			ArrayList<HashMap<String, ArrayList<String>>> temp;
+			if (data.containsKey(uiTab_value)) {
+				temp = data.get(uiTab_value);
+				temp.add(prop_and_values);
+			} else {
+				temp = new ArrayList<HashMap<String, ArrayList<String>>>();
+				temp.add(prop_and_values);
+			}
+			data.put(uiTab_value, temp);
+		}
+		Map<OWLObjectPropertyExpression, Set<OWLIndividual>> objProps = individual
+				.getObjectPropertyValues(ontology);
+		for (Map.Entry<OWLObjectPropertyExpression, Set<OWLIndividual>> e : objProps
+				.entrySet()) {
+			OWLObjectPropertyExpression obj_prop = e.getKey();
+			String property = e.getKey().toString().split("#")[1];
+			property = property.substring(0, property.length() - 1);
+			OWLIndividual temp_individual = this.factory
+					.getOWLNamedIndividual(IRI.create(this.ontology
+							.getOntologyID().getOntologyIRI().toString()
+							+ "#" + property));
+			// To get label of that property
+			OWLEntity temp_entity = (OWLEntity) temp_individual;
+			for (OWLAnnotation annotation : temp_entity
+					.getAnnotations(ontology)) {
+				if (annotation.getProperty().toString().contains("label")) {
+					property = annotation.getValue().toString()
+							.split("\"\\^\\^")[0].substring(1);
+				}
+			}
+			ArrayList<String> values = new ArrayList<String>();
+			HashMap<String, ArrayList<String>> prop_and_values = new HashMap<String, ArrayList<String>>();
+			for (OWLIndividual o : e.getValue()) {
+				String val;
+				// get label and add it to values array list
+				OWLEntity tempentity = (OWLEntity) o;
+				for (OWLAnnotation annotation : tempentity
+						.getAnnotations(ontology)) {
+					if (annotation.getProperty().toString().contains("label")) {
+						val = annotation.getValue().toString()
+								.split("\"\\^\\^")[0].substring(1);
+						values.add(val);
+					}
+				}
+			}
+			prop_and_values.put(property, values);
+			// get the tab name for property if there is one
+			OWLEntity entity = (OWLEntity) obj_prop;
+			String uiTab_value = null;
+			for (OWLAnnotation annotation : entity.getAnnotations(ontology)) {
+				if (annotation.getProperty().toString().contains("uiTab")) {
+					uiTab_value = annotation.getValue().toString()
+							.split("\"\\^\\^")[0].substring(1);
+				}
+			}
+			// Add properties and values map to
+			// corresponding uiTab key in data
 			ArrayList<HashMap<String, ArrayList<String>>> temp;
 			if (data.containsKey(uiTab_value)) {
 				temp = data.get(uiTab_value);
@@ -400,10 +464,5 @@ public class OWLBackend {
 			data.put(uiTab_value, temp);
 		}
 		return data;
-	}
-
-	public static void main(String args[]) {
-		OWLBackend o = new OWLBackend();
-		o.getModellingInfrastructureBriefDetails("ESMF");
 	}
 }

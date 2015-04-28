@@ -1853,6 +1853,26 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#uiTab"/>
+        <IRI>#optionalGridCoordinateSystem</IRI>
+        <Literal datatypeIRI="&xsd;string">Models</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#optionalGridCoordinateSystem</IRI>
+        <Literal datatypeIRI="&xsd;string">Optional Grid Coordinate System</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#uiTab"/>
+        <IRI>#optionalGridDistanceMeasure</IRI>
+        <Literal datatypeIRI="&xsd;string">Models</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#optionalGridDistanceMeasure</IRI>
+        <Literal datatypeIRI="&xsd;string">Optional Grid Distance Measure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#uiTab"/>
         <IRI>#optionalSoftwareDependency</IRI>
         <Literal datatypeIRI="&xsd;string">General</Literal>
     </AnnotationAssertion>
